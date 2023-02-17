@@ -1,6 +1,6 @@
 # ERROR_CODE
 
-from msilib.schema import Error
+# from msilib.schema import Error
 
 
 ERROR_CODE = {
