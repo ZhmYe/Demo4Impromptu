@@ -1,5 +1,4 @@
 from django.http.response import JsonResponse
-from pydantic import Json
 from backend import error
 from backend.function import check_login, check_method, generate_token, \
     get_username_by_token, get_post_json
