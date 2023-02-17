@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from cv2 import VideoWriter
+# from cv2 import VideoWriter
 from django.urls import path
 from . import views
 
