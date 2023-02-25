@@ -21,10 +21,5 @@ from . import views
 urlpatterns = [
     # path('register/', views.register_view),
     # path('unregister/', views.unregister_view),
-    path('search/', views.search_view),
-    path('upload/', views.upload_view),
-    path('info/', views.info_view),
-    path('timeline/', views.timeline_view),
-    path('aberration/', views.aberration_view),
-    path('overview/', views.overview_view)
+    path('search/', views.search_view)
 ]
