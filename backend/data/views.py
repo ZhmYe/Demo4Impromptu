@@ -12,6 +12,7 @@ import os
 from django.conf import settings
 import time
 import copy
+
 # Create your views here.
 # @check_login
 with open("./data/tx.json", encoding="utf-8") as f:
@@ -42,11 +43,11 @@ def search_view(request):
             if transaction["from_account"] in down:
                 flag = True
                 tmp_down.append(transaction["to_account"])
-                edges.append({"source": transaction["from_account"], "target": transaction["to_account"]})
+                edges.append({"source": transaction["from_account"], "target": transaction["to_account"], "value": transaction["value"], "timestamp": "2023-2-27 16:30:40"})
             if transaction["to_account"] in up:
                 flag = True
                 tmp_up.append(transaction["from_account"])
-                edges.append({"source": transaction["from_account"], "target": transaction["to_account"]})
+                edges.append({"source": transaction["from_account"], "target": transaction["to_account"], "value": transaction["value"], "timestamp": "2023-2-27 16:30:40"})
         for account in tmp_up:
             if account not in dic4nodes:
                 dic4nodes[account] = str(len(nodes))
@@ -64,7 +65,10 @@ def search_view(request):
     for node in nodes:
         if node["jump"] == max_jump:
             node["isLeaf"] = True
-    for edge in edges:
+    tx = []
+    for i in range(len(edges)):
+        edge = edges[i]
+        tx.append({"index": i + 1, "source": edge["source"], "target": edge["target"], "value": edge["value"], "timestamp": edge["timestamp"]})
         edge["source"] = dic4nodes[edge["source"]]
         edge["target"] = dic4nodes[edge["target"]]
         edge["style"] = {"startArrow": True}
@@ -72,6 +76,7 @@ def search_view(request):
         'message': 'ok',
         "nodes": nodes,
         "edges": edges,
-        "dic": dic4nodes
+        "dic": dic4nodes,
+        "transactions": tx
     })
     
