@@ -21,5 +21,5 @@ from . import views
 urlpatterns = [
     # path('register/', views.register_view),
     # path('unregister/', views.unregister_view),
-    path('search/', views.search_view)
+    path('overview/', views.analyze_view)
 ]

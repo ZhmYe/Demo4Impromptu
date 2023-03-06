@@ -29,5 +29,5 @@ urlpatterns = [
     path('dashboard/',TemplateView.as_view(template_name='index.html')),
     # path('user/', include('user.urls')),
     path('data/', include('data.urls')),
-    path('block/', include('block.urls'))
+    # path('block/', include('block.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
