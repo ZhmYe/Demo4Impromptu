@@ -85,4 +85,17 @@ def analyze_view(request):
         "nodes": nodes,
         "edges": edges
     })
+@check_method('POST')
+def overview_view(request):
+    with open("./data/overview-nodes.json", encoding="utf-8") as f:
+        nodes = json.load(f)
+        f.close()
+    with open("./data/overview-edges.json", encoding="utf-8") as f:
+        edges = json.load(f)
+        f.close()
+    return JsonResponse({
+        'message': 'ok',
+        "nodes": nodes,
+        "edges": edges
+    })
     

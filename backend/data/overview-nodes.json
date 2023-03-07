@@ -1,0 +1,572 @@
+[
+    {
+        "id": "0x8bc90377daf1b4e71686d025c88b2178089cf3e8",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xc611952d81e4ecbd17c8f963123dec5d7bce1c27",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x1a26db1b2baf0b23f18e19375e8fdc159feb707e",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x43da6d2db9651b7042e31ffb2607a7cfa4d5d03b",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x75cd2467f8dd731a5acb927bd79c4cb361210db6",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xe5c04c954c5494f6975f63e3f19957a380648f82",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x795d8f8b2bf1bb23e99e165c8e4fa067d96cb00a",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xbdf4cf8269c3883dd88975e1978a6aa9d3877f2e",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x1e29e2cefd3395d892678add3eb791ed74114f3b",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x47537db3dfec13e9f20fb4f4cd0cf26e2cc37fdd",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x4842336fdaf0405e12c7e968dc1998856672a4d7",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x6e8b6af9d8b402d89d1f5d8c1cf535850dc28b98",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xa789d472cfef01e09674e4a6c03b35c72e0bfdb0",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xbfa93e1067ebabdc6b648ff7bdc45602fd37b61a",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xa16f139337836df3458652cce7776a4994dba719",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x9b8dda29d117d794fb7c5efe25bf764a022d40d2",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x61001ef5ec6fb84f80f7dd604a84756213120565",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xeedc4487d12982cae7af7e0f31bbc493fe41d0ec",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x5c74b7b08a8991d2d1903e381355513b0b39776b",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x56042da9b90d2944b428c5fe71b9872f5d3c474f",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xb54b03cfca57624d360c2182d4e053b3fde14392",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x47dd5fbebcc5fc73bf64654cca88cc20f04bf9c7",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x3e1620ec5161a514638cdbb803c1c627b0ae76e4",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xe37b8ba0f77c31857f5ee7b08b996271dd781cd4",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x71d3615264203641844fce3b26b58e806a828c07",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x9112e4c33af6a2003a8e785b2ec29d19539e41e3",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x65798e5c90a332bbfa37c793f8847c441df42d44",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x3bbdc2f745bd3148bbd21444c87d352fd7b2ddbe",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x1ec95c848a12f65288b075393f68dec4de9a969d",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xfaae91b5d3c0378ee245e120952b21736f382c59",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x88d19b31f45e275508d616dce198830445501561",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x28b50243721330af6dc8a94e119b6c6c9ccf5fb9",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xaab910acdd01af491179bb7c91a56080f764c8e1",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x4e142a29782cc57274663da652f1ac4505d1b179",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xeb72a1a8b1b566c5ea953dab95b593d23b347787",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x036041d82b9a7d1a4d23cb2a96f5126341f1ce7b",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x005a166d32f9d5fa6deec4ffef8dd40cd3b835b6",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x47c5939356f1ccb1ea060d7811e6f2e71530dca6",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x711390747ba3a7ad80346a373a5db118d57578e5",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xa311057d28a93038278e5cef7b86f035b25be3c9",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x4c6518441a4aa8c42d2e760c62ff9e082d884a4e",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x34ad3b0fc3dd53092df1fda79d04ddf210fba1ba",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x2adcb204d23e6983704b6c8b879a921f6d65bbb9",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x4e928b122bf8b38846a54515e950356a224b2405",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xa53fcbe483f02a799a70aa48a9dddde4c1814a0c",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x8e8adeb64bcd257fdd83645296045094d0cc1845",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xeedfcd5c46bc2932014fe3b551e3bf124348cf16",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xb162335e18ee6bcd5df8302056583bcacaf0c950",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x6dc3198775a1f0d2545e53c25be732ec8ddf92fb",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x46caa192cdfcd561eab13e6020ca490905cf2e42",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x232fc1098433c6096f75500332a9dbe9441513b6",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x8a47bc5b775a2139fafc18a67823f6f59154ba1c",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x84911fa6e2b2867cff600915644ca66000000000",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x0f01e63a0b4bc08d80666738d2bd3f710c92f6b6",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x0b449b1be3273db7395bebcab1ad26d63c5901a2",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xd458cb00aa70b4664177f9657e3f9a1021656219",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xb171f02695e6d315f12fe1d4b7b30cd6c60fe722",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xb4f4067e5b6b829e739e3518934b3e03d508ec03",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x2604bb59a1fb727caaef59431a0a72b86f3a423e",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xa6e3c5cf6f3705d8733ae050d586de3a628bd6ed",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xae5948a2c7463379e50b08f063c6da70ca6c27ab",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xfc874480a2802409f3e9f5a5f38504c579499136",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x113ab887ea42f10b3bd542da8dd26171318f5cd6",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x2d1ea909d1f0a525edacdd7e78c9818415ed1646",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x3817d38528f58a93fa8dfa0effb102431934ead1",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xdcd1e31ec19e30ad1c08639247518022344e34d5",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xde694cdb91d4091cc9cbac110d87b95eac3184dd",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x06a2e52b61fb7e909f413e4513360790c9d07ef1",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x0ee29986fc5dc64a68d4bab12deb8bf49e8b2ad3",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x3893fd752089b2ecf2c091e2dc538f4a6b873db5",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x51e3b7d7a42a3b0b2147b94dec8574583c725945",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xa4b9f41175247657615160536e5c6f2dbfab3684",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xee36a86b6a830548345b6ab0af868cf860b58292",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x1816a967824534a4b54ef3370d165601a2e7fa8b",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x08e8ff8e67bcfd0dee23e7fbf742911bfbb06f81",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xa11ab78d4aa5d16c98bc5d4b6a8af6963c98116a",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x543ed09f37236c1f289542b653b831c09631da3e",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xa31f7d668aa4812c30d7473f0deccb83456ae1cf",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x6f95477393b142296f6e8e79dfd56cef967bc729",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x85f744bd978636b560965c56dfd459773fea681f",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xe4a506bb6ac29b188346bc1c552191ec7530a958",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x284df0a07391b92656295d5f862425901ecbaaa7",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xdc35c2e0ba72de06c2ad4220bfe5666981a0de45",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xd1c87a90455f2765be275c506738c026b011a6c8",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xbdb6164d0c713ac5acd3d98d45cc5420abdd5dbd",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x52dc55b9a0bcae41d60bbef10b9838e052ddca67",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x1922049d729a1e352f4eda0e4ecd536de0069754",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x0c22cd6eb3d16489fb19af18b3603d571e8bac46",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xc5bada5e0870b2fb92a5a455827cd074f77f0c73",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x6a932f0ae2a7a49fb24b70c8eef6ec0808163345",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x4ac71d32f26832b21535e677366020b3ee4b2a31",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x704d1add35b8efefc04adbc18d34422b90e336e7",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x5fbf43294edda687393e80c8f93ddedde6f4a011",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xad573ade894f7bd2c86588ba81308c2f6674914a",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xa3eda3b12782f22d7ab45bf48c432898a9bd55a3",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xe41b974560854fac1fd6ffe712a389b800d8ff36",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x6638a3cdde02683fa3f91b6aef7929988d00ceca",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x2820316fa2fdad36fdef544251bec0688ebb259e",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x9a9802f198c8bb7c50be849bdd436451fad96109",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x25bfb3de82ddff7b44eadf4a3905c408006fbc55",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x64a2fa006f4acff7090a3b6b3d847917bcbd9d61",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x15cc46e874d7d8b9c1535f0f7e5f719b63f22d54",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x13Ebe7F59E87fE12850c26eAf27812736104d3F9",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x92e929d8B2c8430BcAF4cD87654789578BB2b786",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xc55d12edf3502ed4847f1328e1d66b0e3f6b492f",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x8b3468d420fc59034e4e84afa8ef847d3c9b2932",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x72433e5b7a34b7c3235c9fbaef1ef1ae9f0c9f5a",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xc8d7899F22bc4995C8176e3f2a5Ba3F5e87D95E5",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x9402bac72C781d1b4210007E46bC19B018FDDD28",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xE592427A0AEce92De3Edee1F18E0157C05861564",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0xc8d7899f22bc4995c8176e3f2a5ba3f5e87d95e5",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x7858E59e0C01EA06Df3aF3D20aC7B0003275D4Bf",
+        "color": "#DA5914",
+        "degree": "1"
+    },
+    {
+        "id": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
+        "color": "#DA5914",
+        "degree": "1"
+    }
+]
