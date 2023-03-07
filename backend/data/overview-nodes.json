@@ -1,572 +1,395 @@
 [
-    {
-        "id": "0x8bc90377daf1b4e71686d025c88b2178089cf3e8",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xc611952d81e4ecbd17c8f963123dec5d7bce1c27",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x1a26db1b2baf0b23f18e19375e8fdc159feb707e",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x43da6d2db9651b7042e31ffb2607a7cfa4d5d03b",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x75cd2467f8dd731a5acb927bd79c4cb361210db6",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xe5c04c954c5494f6975f63e3f19957a380648f82",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x795d8f8b2bf1bb23e99e165c8e4fa067d96cb00a",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xbdf4cf8269c3883dd88975e1978a6aa9d3877f2e",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x1e29e2cefd3395d892678add3eb791ed74114f3b",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x47537db3dfec13e9f20fb4f4cd0cf26e2cc37fdd",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x4842336fdaf0405e12c7e968dc1998856672a4d7",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x6e8b6af9d8b402d89d1f5d8c1cf535850dc28b98",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xa789d472cfef01e09674e4a6c03b35c72e0bfdb0",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xbfa93e1067ebabdc6b648ff7bdc45602fd37b61a",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xa16f139337836df3458652cce7776a4994dba719",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x9b8dda29d117d794fb7c5efe25bf764a022d40d2",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x61001ef5ec6fb84f80f7dd604a84756213120565",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xeedc4487d12982cae7af7e0f31bbc493fe41d0ec",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x5c74b7b08a8991d2d1903e381355513b0b39776b",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x56042da9b90d2944b428c5fe71b9872f5d3c474f",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xb54b03cfca57624d360c2182d4e053b3fde14392",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x47dd5fbebcc5fc73bf64654cca88cc20f04bf9c7",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x3e1620ec5161a514638cdbb803c1c627b0ae76e4",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xe37b8ba0f77c31857f5ee7b08b996271dd781cd4",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x71d3615264203641844fce3b26b58e806a828c07",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x9112e4c33af6a2003a8e785b2ec29d19539e41e3",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x65798e5c90a332bbfa37c793f8847c441df42d44",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x3bbdc2f745bd3148bbd21444c87d352fd7b2ddbe",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x1ec95c848a12f65288b075393f68dec4de9a969d",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xfaae91b5d3c0378ee245e120952b21736f382c59",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x88d19b31f45e275508d616dce198830445501561",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x28b50243721330af6dc8a94e119b6c6c9ccf5fb9",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xaab910acdd01af491179bb7c91a56080f764c8e1",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x4e142a29782cc57274663da652f1ac4505d1b179",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xeb72a1a8b1b566c5ea953dab95b593d23b347787",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x036041d82b9a7d1a4d23cb2a96f5126341f1ce7b",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x005a166d32f9d5fa6deec4ffef8dd40cd3b835b6",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x47c5939356f1ccb1ea060d7811e6f2e71530dca6",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x711390747ba3a7ad80346a373a5db118d57578e5",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xa311057d28a93038278e5cef7b86f035b25be3c9",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x4c6518441a4aa8c42d2e760c62ff9e082d884a4e",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x34ad3b0fc3dd53092df1fda79d04ddf210fba1ba",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x2adcb204d23e6983704b6c8b879a921f6d65bbb9",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x4e928b122bf8b38846a54515e950356a224b2405",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xa53fcbe483f02a799a70aa48a9dddde4c1814a0c",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x8e8adeb64bcd257fdd83645296045094d0cc1845",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xeedfcd5c46bc2932014fe3b551e3bf124348cf16",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xb162335e18ee6bcd5df8302056583bcacaf0c950",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x6dc3198775a1f0d2545e53c25be732ec8ddf92fb",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x46caa192cdfcd561eab13e6020ca490905cf2e42",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x232fc1098433c6096f75500332a9dbe9441513b6",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x8a47bc5b775a2139fafc18a67823f6f59154ba1c",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x84911fa6e2b2867cff600915644ca66000000000",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x0f01e63a0b4bc08d80666738d2bd3f710c92f6b6",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x0b449b1be3273db7395bebcab1ad26d63c5901a2",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xd458cb00aa70b4664177f9657e3f9a1021656219",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xb171f02695e6d315f12fe1d4b7b30cd6c60fe722",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xb4f4067e5b6b829e739e3518934b3e03d508ec03",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x2604bb59a1fb727caaef59431a0a72b86f3a423e",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xa6e3c5cf6f3705d8733ae050d586de3a628bd6ed",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xae5948a2c7463379e50b08f063c6da70ca6c27ab",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xfc874480a2802409f3e9f5a5f38504c579499136",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x113ab887ea42f10b3bd542da8dd26171318f5cd6",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x2d1ea909d1f0a525edacdd7e78c9818415ed1646",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x3817d38528f58a93fa8dfa0effb102431934ead1",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xdcd1e31ec19e30ad1c08639247518022344e34d5",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xde694cdb91d4091cc9cbac110d87b95eac3184dd",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x06a2e52b61fb7e909f413e4513360790c9d07ef1",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x0ee29986fc5dc64a68d4bab12deb8bf49e8b2ad3",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x3893fd752089b2ecf2c091e2dc538f4a6b873db5",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x51e3b7d7a42a3b0b2147b94dec8574583c725945",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xa4b9f41175247657615160536e5c6f2dbfab3684",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xee36a86b6a830548345b6ab0af868cf860b58292",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x1816a967824534a4b54ef3370d165601a2e7fa8b",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x08e8ff8e67bcfd0dee23e7fbf742911bfbb06f81",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xa11ab78d4aa5d16c98bc5d4b6a8af6963c98116a",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x543ed09f37236c1f289542b653b831c09631da3e",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xa31f7d668aa4812c30d7473f0deccb83456ae1cf",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x6f95477393b142296f6e8e79dfd56cef967bc729",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x85f744bd978636b560965c56dfd459773fea681f",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xe4a506bb6ac29b188346bc1c552191ec7530a958",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x284df0a07391b92656295d5f862425901ecbaaa7",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xdc35c2e0ba72de06c2ad4220bfe5666981a0de45",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xd1c87a90455f2765be275c506738c026b011a6c8",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xbdb6164d0c713ac5acd3d98d45cc5420abdd5dbd",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x52dc55b9a0bcae41d60bbef10b9838e052ddca67",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x1922049d729a1e352f4eda0e4ecd536de0069754",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x0c22cd6eb3d16489fb19af18b3603d571e8bac46",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xc5bada5e0870b2fb92a5a455827cd074f77f0c73",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x6a932f0ae2a7a49fb24b70c8eef6ec0808163345",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x4ac71d32f26832b21535e677366020b3ee4b2a31",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x704d1add35b8efefc04adbc18d34422b90e336e7",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x5fbf43294edda687393e80c8f93ddedde6f4a011",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xad573ade894f7bd2c86588ba81308c2f6674914a",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xa3eda3b12782f22d7ab45bf48c432898a9bd55a3",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xe41b974560854fac1fd6ffe712a389b800d8ff36",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x6638a3cdde02683fa3f91b6aef7929988d00ceca",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x2820316fa2fdad36fdef544251bec0688ebb259e",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x9a9802f198c8bb7c50be849bdd436451fad96109",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x25bfb3de82ddff7b44eadf4a3905c408006fbc55",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x64a2fa006f4acff7090a3b6b3d847917bcbd9d61",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x15cc46e874d7d8b9c1535f0f7e5f719b63f22d54",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x13Ebe7F59E87fE12850c26eAf27812736104d3F9",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x92e929d8B2c8430BcAF4cD87654789578BB2b786",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xc55d12edf3502ed4847f1328e1d66b0e3f6b492f",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x8b3468d420fc59034e4e84afa8ef847d3c9b2932",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x72433e5b7a34b7c3235c9fbaef1ef1ae9f0c9f5a",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xc8d7899F22bc4995C8176e3f2a5Ba3F5e87D95E5",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x9402bac72C781d1b4210007E46bC19B018FDDD28",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x8ad599c3A0ff1De082011EFDDc58f1908eb6e6D8",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xE592427A0AEce92De3Edee1F18E0157C05861564",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0xc8d7899f22bc4995c8176e3f2a5ba3f5e87d95e5",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x7858E59e0C01EA06Df3aF3D20aC7B0003275D4Bf",
-        "color": "#DA5914",
-        "degree": "1"
-    },
-    {
-        "id": "0x88e6A0c2dDD26FEEb64F039a2c41296FcB3f5640",
-        "color": "#DA5914",
-        "degree": "1"
-    }
-]
+    {"id": "0xc098b2a3aa256d2140208c3de6543aaef5cd3a94", "degree": 11, "cluster": 0},
+    {"id": "0x47537db3dfec13e9f20fb4f4cd0cf26e2cc37fdd", "degree": 73, "cluster": 0},
+    {"id": "0x3a66c4f36933bd1adc1ae6d3af754fb95601b9ac", "degree": 2, "cluster": 0},
+    {"id": "0x00000000a50bb64b4bbeceb18715748dface08af", "degree": 1, "cluster": 0},
+    {"id": "0xa5409ec958c83c3f309868babaca7c86dcb077c1", "degree": 4, "cluster": 1},
+    {"id": "0x0d87d35dc73056484e4e41300a810dc58ad1d668", "degree": 1, "cluster": 0},
+    {"id": "0x3da2133160967ed0ac99a807e3bf9dc98fb9a15c", "degree": 1, "cluster": 0},
+    {"id": "0x7f268357a8c2552623316e2562d90e642bb538e5", "degree": 23, "cluster": 1},
+    {"id": "0x83c8f28c26bf6aaca652df1dbbe0e1b56f8baba2", "degree": 1, "cluster": 0},
+    {"id": "0x160c404b2b49cbc3240055ceaee026df1e8497a0", "degree": 4, "cluster": 0},
+    {"id": "0x709d30f1f60f03d85a0ef33142ef3259392dc9e1", "degree": 3, "cluster": 0},
+    {"id": "0x4a8c9d751eeabc5521a68fb080dd7e72e46462af", "degree": 2, "cluster": 0},
+    {"id": "0x5833eabb517c2881b5ffa04973b5f6ccb407c85c", "degree": 1, "cluster": 0},
+    {"id": "0x809d8f2b12454fc07408d2479cf6dc701ecd5a9f", "degree": 2, "cluster": 0},
+    {"id": "0x2eb4f7625aad8c521e3600ee38fb8f82751e8870", "degree": 2, "cluster": 0},
+    {"id": "0xc83b7a1020ea7fa3b5d981cf8145cfde4be63cc7", "degree": 2, "cluster": 0},
+    {"id": "0x58e56850c189cde9a0b427035f3648d4ea8d2b1a", "degree": 3, "cluster": 0},
+    {"id": "0x066d498c64faf49c265ccfc522b8b3a37449c177", "degree": 3, "cluster": 0},
+    {"id": "0x596a0f276ee432d8a28441e55737ff55cf30d0f7", "degree": 2, "cluster": 0},
+    {"id": "0x0e3dcf23d0eb4ad8f177782cb33728d62ffb4bdb", "degree": 1, "cluster": 0},
+    {"id": "0x34d85c9cdeb23fa97cb08333b511ac86e1c4e258", "degree": 4, "cluster": 0},
+    {"id": "0x78a5e2b8c280fa5580fbe1e1ed546183f959d305", "degree": 3, "cluster": 0},
+    {"id": "0x306b1ea3ecdf94ab739f1910bbda052ed4a9f949", "degree": 2, "cluster": 0},
+    {"id": "0x4b103d07c18798365946e76845edc6b565779402", "degree": 1, "cluster": 0},
+    {"id": "0xf228540ed96bf9a2db814a27c741b0c94917298a", "degree": 1, "cluster": 0},
+    {"id": "0xd97821759267c2b3acf9297c6e869f463a663e70", "degree": 1, "cluster": 0},
+    {"id": "0x0f91b9accca2838dbeee53f3aa555d426ad16f29", "degree": 1, "cluster": 0},
+    {"id": "0xbd3041cdc089cddcc609ceb1b149d55dae7491c5", "degree": 2, "cluster": 0},
+    {"id": "0xc611952d81e4ecbd17c8f963123dec5d7bce1c27", "degree": 127, "cluster": 6},
+    {"id": "0x3cd751e6b0078be393132286c442345e5dc49699", "degree": 4, "cluster": 1},
+    {"id": "0x4842336fdaf0405e12c7e968dc1998856672a4d7", "degree": 32, "cluster": 1},
+    {"id": "0xddfabcdc4d8ffc6d5beaf154f18b778f892a0740", "degree": 6, "cluster": 1},
+    {"id": "0xfc3668363bf9c13f84b1263b2d65bd480ab235fd", "degree": 1, "cluster": 1},
+    {"id": "0xb5d85cbf7cb3ee0d56b3bb207d5fc4b82f43f511", "degree": 5, "cluster": 1},
+    {"id": "0x6cbafc33ba468aa479b706fc613e575e49e21886", "degree": 1, "cluster": 1},
+    {"id": "0xeb2629a2734e272bcc07bda959863f316f4bd4cf", "degree": 3, "cluster": 1},
+    {"id": "0x7be8076f4ea4a4ad08075c2508e481d6c946d12b", "degree": 1, "cluster": 1},
+    {"id": "0xfc293c656c14185256f3bb28a6b7f4320f472a97", "degree": 1, "cluster": 1},
+    {"id": "0x79547219c34514162ac86585bc22a787500afb21", "degree": 1, "cluster": 1},
+    {"id": "0x85265fb0b93e664f50854783da5f0326b677ed05", "degree": 1, "cluster": 1},
+    {"id": "0x8e7d9f344c525a4b161bc1959fd217eb34ecd010", "degree": 1, "cluster": 1},
+    {"id": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2", "degree": 19, "cluster": 1},
+    {"id": "0xb3b86f81386149b53a7c735470b11fb793e5abf4", "degree": 1, "cluster": 1},
+    {"id": "0x99cbf3ffaaad92172ee2e82937a3aa25d28d2bab", "degree": 1, "cluster": 5},
+    {"id": "0x75cd2467f8dd731a5acb927bd79c4cb361210db6", "degree": 16, "cluster": 5},
+    {"id": "0x694031c777e8a93f673671bf021483948f65d24d", "degree": 1, "cluster": 5},
+    {"id": "0x229134d091ee7849c38810dd6082809712268c3e", "degree": 1, "cluster": 5},
+    {"id": "0xe7ca133dbaeec2acc157c1c91f0a83c1187c6e14", "degree": 1, "cluster": 5},
+    {"id": "0x6ef15b6cb31f71bea33d5acdd15a1f7ef6ccc7ab", "degree": 1, "cluster": 5},
+    {"id": "0x4539d20724a51ba0aa2edd6fa4391d673d9be757", "degree": 1, "cluster": 5},
+    {"id": "0x881d40237659c251811cec9c364ef91dc08d300c", "degree": 26, "cluster": 5},
+    {"id": "0x3ee18b2214aff97000d974cf647e7c347e8fa585", "degree": 3, "cluster": 5},
+    {"id": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48", "degree": 32, "cluster": 5},
+    {"id": "0xd90e2f925da726b50c4ed8d0fb90ad053324f31b", "degree": 21, "cluster": 5},
+    {"id": "0x4de23f3f0fb3318287378adbde030cf61714b2f3", "degree": 1, "cluster": 5},
+    {"id": "0x151b381058f91cf871e7ea1ee83c45326f61e96d", "degree": 6, "cluster": 3},
+    {"id": "0x795d8f8b2bf1bb23e99e165c8e4fa067d96cb00a", "degree": 2, "cluster": 3},
+    {"id": "0x28b803c8f7943ba2bc7d0d72e205d8ffb8a8f338", "degree": 1, "cluster": 4},
+    {"id": "0xa789d472cfef01e09674e4a6c03b35c72e0bfdb0", "degree": 52, "cluster": 4},
+    {"id": "0xd0f772c262d9b30b0918bcb8043b95bc25f0d4b7", "degree": 1, "cluster": 4},
+    {"id": "0x3e5705f0f3265e18d232cd19a6c53d00413a0428", "degree": 1, "cluster": 4},
+    {"id": "0xd36c60509e257d6f373317828f6b7abb9b2ff9fe", "degree": 1, "cluster": 4},
+    {"id": "0x71ce49c2e4448ec78cdcf12c45fa71b65a9a1a8e", "degree": 1, "cluster": 4},
+    {"id": "0xd7efcbb86efdd9e8de014dafa5944aae36e817e4", "degree": 3, "cluster": 4},
+    {"id": "0xb093d8be8f5c7a4363329aea07f4c7e6031ddd9c", "degree": 1, "cluster": 4},
+    {"id": "0xa73344a470273c92bc66a382c995d29a61c27442", "degree": 1, "cluster": 4},
+    {"id": "0x667bdbfa51e9f862c0ae040d568b494ac24b8248", "degree": 2, "cluster": 4},
+    {"id": "0x99757deb609d69b3bef8232931d5eb7e8335f7f5", "degree": 3, "cluster": 4},
+    {"id": "0x9eb9bfdbe25bbff11555a1fb0daaacac259108f7", "degree": 2, "cluster": 4},
+    {"id": "0x9f1c8f8940dfe3ca157059f7ee01fcf8633cf3ca", "degree": 1, "cluster": 4},
+    {"id": "0x039c2cf9a5e7f43222c2ecacefd13e31c1593eff", "degree": 1, "cluster": 4},
+    {"id": "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce", "degree": 3, "cluster": 4},
+    {"id": "0xe592427a0aece92de3edee1f18e0157c05861564", "degree": 5, "cluster": 4},
+    {"id": "0xfc958b70df387a7ca5d3cceeb4fbff4add12ed06", "degree": 1, "cluster": 4},
+    {"id": "0x89af46e1a14f23805b9774f52e81eefc1e7c9b04", "degree": 1, "cluster": 4},
+    {"id": "0x39449510ddba93c8ffa6f4e28ffe9634e2af33fa", "degree": 1, "cluster": 4},
+    {"id": "0xf755462a27f997194f95844035d4b91dd9f28c71", "degree": 1, "cluster": 4},
+    {"id": "0xb236dbac3757d1838ccb70e6b5a20fa06d6496a0", "degree": 1, "cluster": 4},
+    {"id": "0x04f2694c8fcee23e8fd0dfea1d4f5bb8c352111f", "degree": 3, "cluster": 4},
+    {"id": "0xfd31c7d00ca47653c6ce64af53c1571f9c36566a", "degree": 1, "cluster": 4},
+    {"id": "0x383518188c0c6d7730d91b2c03a03c837814a899", "degree": 1, "cluster": 4},
+    {"id": "0x3d2300725fab8f911c4176f20932e26e047324f8", "degree": 2, "cluster": 4},
+    {"id": "0x61cc3e0d62f3355e6edf94ed6698f410d1306e8d", "degree": 1, "cluster": 4},
+    {"id": "0x02084274eb33971d1fd8b77d8123e0422b5770de", "degree": 2, "cluster": 4},
+    {"id": "0x2ee38db239c5ced225115df0d4675b32b689b83c", "degree": 1, "cluster": 4},
+    {"id": "0x0423d8be8bdae3f13fae5622ea09aa6bb550c5ff", "degree": 1, "cluster": 4},
+    {"id": "0xbee8955f1f1297f3bf1eea0e46a8a650e536f047", "degree": 1, "cluster": 4},
+    {"id": "0xab7297b8a1bee02693d35187985b4ab3429911a9", "degree": 2, "cluster": 4},
+    {"id": "0x15b543e986b8c34074dfc9901136d9355a537e7e", "degree": 1, "cluster": 4},
+    {"id": "0x3eccd0ad4dac24cf8396a843702dc22724479bd0", "degree": 1, "cluster": 4},
+    {"id": "0x4981b3cef53c711406c18adb3c2d0ede1e1c4520", "degree": 1, "cluster": 4},
+    {"id": "0xd73b3c4b04f5c775e80d86ec071d9b6b67663bd8", "degree": 1, "cluster": 4},
+    {"id": "0x4057db5bd9f67a566aa10e5587b1a964affc6a16", "degree": 1, "cluster": 4},
+    {"id": "0x0443dd35b2399a0b48072d0f5ffa3ca50bd903a8", "degree": 1, "cluster": 2},
+    {"id": "0xbdf4cf8269c3883dd88975e1978a6aa9d3877f2e", "degree": 438, "cluster": 2},
+    {"id": "0xfe441ae7f0521386400ce132434e17bb24e8aee9", "degree": 17, "cluster": 2},
+    {"id": "0x564286362092d8e7936f0549571a803b203aaced", "degree": 2, "cluster": 2},
+    {"id": "0x00de515426c7e41efc5831116e68141b7e073eaf", "degree": 2, "cluster": 2},
+    {"id": "0x85b931a32a0725be14285b66f1a22178c672d69b", "degree": 1, "cluster": 2},
+    {"id": "0xdac17f958d2ee523a2206206994597c13d831ec7", "degree": 16, "cluster": 5},
+    {"id": "0x3f5ce5fbfe3e9af3971dd833d26ba9b5c936f0be", "degree": 1, "cluster": 2},
+    {"id": "0x103cc17c2b1586e5cd9bad308690bcd0bbe54d5e", "degree": 1, "cluster": 2},
+    {"id": "0x50d1c9771902476076ecfc8b2a83ad6b9355a4c9", "degree": 1, "cluster": 2},
+    {"id": "0xb01cb49fe0d6d6e47edf3a072d15dfe73155331c", "degree": 1, "cluster": 2},
+    {"id": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d", "degree": 14, "cluster": 2},
+    {"id": "0x0681d8db095565fe8a346fa0277bffde9c0edbbf", "degree": 1, "cluster": 2},
+    {"id": "0x0f51bb10119727a7e5ea3538074fb341f56b09ad", "degree": 2, "cluster": 2},
+    {"id": "0x7dd3f5705504002dc946aeafe6629b9481b72272", "degree": 3, "cluster": 2},
+    {"id": "0xe33b15629739770a27c4726a22be61128aa1c781", "degree": 6, "cluster": 2},
+    {"id": "0x41cc2a827c81396f805269561d117d9112a4a358", "degree": 5, "cluster": 2},
+    {"id": "0x41b856701bb8c24cece2af10651bfafebb57cf49", "degree": 5, "cluster": 2},
+    {"id": "0xd551234ae421e3bcba99a0da6d736074f22192ff", "degree": 2, "cluster": 2},
+    {"id": "0x11889c740e97cd734bd7e55f2174c62ede3cc51b", "degree": 2, "cluster": 2},
+    {"id": "0xf340a40e197c77979be698401fd03251741137ee", "degree": 1, "cluster": 2},
+    {"id": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599", "degree": 3, "cluster": 2},
+    {"id": "0x8f22f2063d253846b53609231ed80fa571bc0c8f", "degree": 2, "cluster": 2},
+    {"id": "0xd54f502e184b6b739d7d27a6410a67dc462d69c8", "degree": 2, "cluster": 2},
+    {"id": "0x56eddb7aa87536c09ccc2793473599fd21a8b17f", "degree": 2, "cluster": 2},
+    {"id": "0x1bf488f4a33f1d60a24c5a0a77b12558a6588a16", "degree": 1, "cluster": 2},
+    {"id": "0xf110fec3075d7531141b6bf16b11604cb028a17b", "degree": 3, "cluster": 2},
+    {"id": "0x1ef6a7e2c966fb7c5403efefde38338b1a95a084", "degree": 1, "cluster": 2},
+    {"id": "0x6fe40f415448d930166f9110d3bbe2146383bc66", "degree": 1, "cluster": 2},
+    {"id": "0x83e6f1e41cdd28eaceb20cb649155049fac3d5aa", "degree": 1, "cluster": 2},
+    {"id": "0x4e15361fd6b4bb609fa63c81a2be19d873717870", "degree": 1, "cluster": 2},
+    {"id": "0x9e32b13ce7f2e80a01932b42553652e053d6ed8e", "degree": 1, "cluster": 2},
+    {"id": "0x11111112542d85b3ef69ae05771c2dccff4faa26", "degree": 1, "cluster": 2},
+    {"id": "0x6f2235864cf897078fcdcc2854b76c482cd16874", "degree": 1, "cluster": 2},
+    {"id": "0x0fd829c3365a225fb9226e75c97c3a114bd3199e", "degree": 1, "cluster": 2},
+    {"id": "0x92d6c1e31e14520e676a687f0a93788b716beff5", "degree": 1, "cluster": 2},
+    {"id": "0x4976a4a02f38326660d17bf34b431dc6e2eb2327", "degree": 2, "cluster": 2},
+    {"id": "0xabea9132b05a70803a4e85094fd0e1800777fbef", "degree": 2, "cluster": 2},
+    {"id": "0x8481a6ebaf5c7dabc3f7e09e44a89531fd31f822", "degree": 1, "cluster": 2},
+    {"id": "0x737901bea3eeb88459df9ef1be8ff3ae1b42a2ba", "degree": 1, "cluster": 2},
+    {"id": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f", "degree": 2, "cluster": 2},
+    {"id": "0xf9c53268e9de692ae1b2ea5216e24e1c3ad7cb1e", "degree": 3, "cluster": 2},
+    {"id": "0xb5a9619b5bfe4e12ee2f5cb8249e8856c8911e3d", "degree": 1, "cluster": 2},
+    {"id": "0xfb7d186e24e128be1f1339fb9c2ba6fdbd87c6f9", "degree": 3, "cluster": 2},
+    {"id": "0x23dcf6976cdd444572a401d3cf10d9690ac9165c", "degree": 2, "cluster": 2},
+    {"id": "0x3194232434d4058f83603b5006ab400d3cd10bb8", "degree": 1, "cluster": 2},
+    {"id": "0xd7c26064a9ff01065c15f6907e181362569c608c", "degree": 1, "cluster": 2},
+    {"id": "0xba0439088dc1e75f58e0a7c107627942c15cbb41", "degree": 1, "cluster": 2},
+    {"id": "0xe72f3e105e475d7db3a003ffa377afae9c2c6c11", "degree": 2, "cluster": 2},
+    {"id": "0xb9978bc938ff4294b7ec194817bee8bc7054676b", "degree": 8, "cluster": 2},
+    {"id": "0x446ab8e3cbc987ce4f38fa48ac0ed0e6453b79f5", "degree": 4, "cluster": 2},
+    {"id": "0xe72bcd8fd77527749a7c3ea89e2ad48e2a34af52", "degree": 1, "cluster": 2},
+    {"id": "0x21a31ee1afc51d94c2efccaa2092ad1028285549", "degree": 2, "cluster": 2},
+    {"id": "0xacb83e0633d6605c5001e2ab59ef3c745547c8c7", "degree": 2, "cluster": 2},
+    {"id": "0xa18607ca4a3804cc3cd5730eafefcc47a7641643", "degree": 1, "cluster": 2},
+    {"id": "0x6b175474e89094c44da98b954eedeac495271d0f", "degree": 7, "cluster": 6},
+    {"id": "0x1111111254fb6c44bac0bed2854e76f90643097d", "degree": 3, "cluster": 2},
+    {"id": "0xa9594972ba25e35cd2691f9940e18e5af03d5f92", "degree": 1, "cluster": 2},
+    {"id": "0xe6c30756136e07eb5268c3232efbfbe645c1ba5a", "degree": 3, "cluster": 2},
+    {"id": "0x04ea900f40b2fd8c9340cc4a041cdea98a083216", "degree": 1, "cluster": 2},
+    {"id": "0x46340b20830761efd32832a74d7169b29feb9758", "degree": 13, "cluster": 3},
+    {"id": "0x155bdbdaac9bba68c62199b5f912d53ef74ec563", "degree": 1, "cluster": 2},
+    {"id": "0x5943be6c7d266af122dd06e69a81e20b31304d01", "degree": 1, "cluster": 2},
+    {"id": "0x28c6c06298d514db089934071355e5743bf21d60", "degree": 2, "cluster": 2},
+    {"id": "0x2e6f7e74490567a830ee133c4fd2038038a07989", "degree": 1, "cluster": 2},
+    {"id": "0x6144d927ee371de7e7f8221b596f3432e7a8e6d9", "degree": 2, "cluster": 2},
+    {"id": "0xf1f3ca6268f330fda08418db12171c3173ee39c9", "degree": 2, "cluster": 2},
+    {"id": "0xaaef88cea01475125522e117bfe45cf32044e238", "degree": 8, "cluster": 2},
+    {"id": "0xc747f9d3e6b34596977e79f09a2ab122042673e1", "degree": 13, "cluster": 2},
+    {"id": "0x5bd25d2f4f26bc82a34de016d34612a28a0cd492", "degree": 5, "cluster": 2},
+    {"id": "0x6ad3dac99c9a4a480748c566ce7b3503506e3d71", "degree": 1, "cluster": 2},
+    {"id": "0xd9e1ce17f2641f24ae83637ab66a2cca9c378b9f", "degree": 1, "cluster": 2},
+    {"id": "0x1117ac6ad6cdf1a3bc543bad3b133724620522d5", "degree": 1, "cluster": 2},
+    {"id": "0xea25e2b3e35c67876957ee00a28cd912ff113f54", "degree": 4, "cluster": 2},
+    {"id": "0x949d37bc99a1ed3b6851ddb3d9d003154e00f617", "degree": 1, "cluster": 2},
+    {"id": "0x6a445e9f40e0b97c92d0b8a3366cef1d67f700bf", "degree": 4, "cluster": 2},
+    {"id": "0x7766e86584069cf5d1223323d89486e95d9a8c22", "degree": 1, "cluster": 2},
+    {"id": "0xdab396ccf3d84cf2d07c4454e10c8a6f5b008d2b", "degree": 3, "cluster": 2},
+    {"id": "0xfd6ff39da508d281c2d255e9bbbfab34b6be60c3", "degree": 2, "cluster": 2},
+    {"id": "0xa0c68c638235ee32657e8f720a23cec1bfc77c77", "degree": 3, "cluster": 3},
+    {"id": "0x3f916867a9f38aa68ad7583c7360f83387d06daf", "degree": 3, "cluster": 2},
+    {"id": "0xb8901acb165ed027e32754e0ffe830802919727f", "degree": 3, "cluster": 2},
+    {"id": "0xe75b8e4da218f21cf0f0ce967ac35276a10aabdb", "degree": 1, "cluster": 2},
+    {"id": "0x5f86558387293b6009d7896a61fcc86c17808d62", "degree": 1, "cluster": 2},
+    {"id": "0x0d0707963952f2fba59dd06f2b425ace40b492fe", "degree": 1, "cluster": 2},
+    {"id": "0xffb4bcc28b1b3936f095f382b6fd9b27cfc9e3f9", "degree": 3, "cluster": 2},
+    {"id": "0x06bdc702fb8af5af8067534546e0c54ea4243ea9", "degree": 2, "cluster": 2},
+    {"id": "0x414bf02c4e9542ff76bd861e6543c241d3e0dfdc", "degree": 1, "cluster": 2},
+    {"id": "0x3666f603cc164936c1b87e207f36beba4ac5f18a", "degree": 1, "cluster": 2},
+    {"id": "0xaae9f9d4fb8748feba405ce25856dc57c91bbb92", "degree": 1, "cluster": 2},
+    {"id": "0x03907fc9687ef866ceba32739c584f9207ee863b", "degree": 1, "cluster": 2},
+    {"id": "0x165cd37b4c644c2921454429e7f9358d18a45e14", "degree": 1, "cluster": 2},
+    {"id": "0x80c67432656d59144ceff962e8faf8926599bcf8", "degree": 3, "cluster": 2},
+    {"id": "0x0966a53f2533eaf01d0bb2fa0e2274f3002287f1", "degree": 1, "cluster": 2},
+    {"id": "0x41e3d4b3a79e464f65fffe18aa063de983ef97de", "degree": 1, "cluster": 2},
+    {"id": "0xc7bacf685ac6850c590bb037b72f686926f38dd1", "degree": 1, "cluster": 2},
+    {"id": "0x78a7f7929219c88b8e8265ae606981d8a3056ad6", "degree": 1, "cluster": 2},
+    {"id": "0x98db847ed84ef8bd6e5c4f593fe0341869fc41cc", "degree": 10, "cluster": 2},
+    {"id": "0x1afb69dbc9f54d08dab1bd3436f8da1af819e647", "degree": 8, "cluster": 2},
+    {"id": "0xbe223020724cc3e2999f5dceda3120484fdbfef7", "degree": 1, "cluster": 2},
+    {"id": "0xf45c0d38df3eac6bf6d0ff74d53421dc34e14c04", "degree": 2, "cluster": 2},
+    {"id": "0x32777c126261091b1a3663248b7dd1ec84eea6f0", "degree": 1, "cluster": 2},
+    {"id": "0xc16c5f1fc9fc316fb3b4b353500efda9a1a1b7f0", "degree": 3, "cluster": 2},
+    {"id": "0x649d58fd8fa2361535c159013728fcbec016da4a", "degree": 10, "cluster": 2},
+    {"id": "0x86d3b65b248d749dd70a701f5dffecba7c7cdf72", "degree": 1, "cluster": 2},
+    {"id": "0x4d224452801aced8b2f0aebe155379bb5d594381", "degree": 2, "cluster": 2},
+    {"id": "0x92e130d5ed0f14199edfa050071116ca60e99aa5", "degree": 1, "cluster": 2},
+    {"id": "0x5faa989af96af85384b8a938c2ede4a7378d9875", "degree": 4, "cluster": 2},
+    {"id": "0x32c85e56a82d66fa3c13e7df900682d63fcbaf89", "degree": 2, "cluster": 2},
+    {"id": "0x8b7929d42aad7a4899917aeca28e20e784a7ac82", "degree": 1, "cluster": 2},
+    {"id": "0x13e9053d9090ed6a1fae3f59f9bd3c1fca4c5726", "degree": 1, "cluster": 2},
+    {"id": "0xbf92a355c73de74969a75258e02a15a2764d4970", "degree": 1, "cluster": 2},
+    {"id": "0xe3d0fe9b7e0b951663267a3ed1e6577f6f79757e", "degree": 1, "cluster": 2},
+    {"id": "0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc", "degree": 2, "cluster": 2},
+    {"id": "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45", "degree": 3, "cluster": 5},
+    {"id": "0xdc1664458d2f0b6090bea60a8793a4e66c2f1c00", "degree": 1, "cluster": 2},
+    {"id": "0xa67fefa6657e9aa3e4ee6ef28531641dafbb8caf", "degree": 3, "cluster": 2},
+    {"id": "0xfff11417a58781d3c72083cb45ef54d79cd02437", "degree": 1, "cluster": 2},
+    {"id": "0x34f08f2a3f4a86531e9c4139fde571a62689afec", "degree": 1, "cluster": 2},
+    {"id": "0xae0ee0a63a2ce6baeeffe56e7714fb4efe48d419", "degree": 4, "cluster": 2},
+    {"id": "0x718409bf0573dec6b25b77f33457ecba32930849", "degree": 2, "cluster": 2},
+    {"id": "0x4e2f98c96e2d595a83afa35888c4af58ac343e44", "degree": 1, "cluster": 2},
+    {"id": "0xb16c1342e617a5b6e4b631eb114483fdb289c0a4", "degree": 1, "cluster": 2},
+    {"id": "0xee262adcd9ecc0476452e302cf3c822f634dafaf", "degree": 1, "cluster": 2},
+    {"id": "0x111111111117dc0aa78b770fa6a738034120c302", "degree": 1, "cluster": 2},
+    {"id": "0xe42cad6fc883877a76a26a16ed92444ab177e306", "degree": 1, "cluster": 2},
+    {"id": "0x75cda57917e9f73705dc8bcf8a6b2f99adbdc5a5", "degree": 1, "cluster": 2},
+    {"id": "0xdef1c0ded9bec7f1a1670819833240f027b25eff", "degree": 1, "cluster": 2},
+    {"id": "0x5a7749f83b81b301cab5f48eb8516b986daef23d", "degree": 1, "cluster": 2},
+    {"id": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1", "degree": 1, "cluster": 2},
+    {"id": "0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0", "degree": 3, "cluster": 6},
+    {"id": "0x857679d69fe50e7b722f94acd2629d80c355163d", "degree": 3, "cluster": 2},
+    {"id": "0x84c2b16fa6877a8ff4f3271db7ea837233dfd6f0", "degree": 2, "cluster": 2},
+    {"id": "0x8cc6517e45db7a0803fef220d9b577326a12033f", "degree": 1, "cluster": 2},
+    {"id": "0xd41ce249c8683733f129f8be337bb23d4f70c933", "degree": 1, "cluster": 2},
+    {"id": "0x07ced903e6ad0278cc32bc83a3fc97112f763722", "degree": 4, "cluster": 2},
+    {"id": "0xccce297b06db0d859dfff0b936137f213e9b08ef", "degree": 1, "cluster": 2},
+    {"id": "0x3efc6b697720a713fee526abfbcd0bd81c90ecd9", "degree": 1, "cluster": 2},
+    {"id": "0xa6b71e26c5e0845f74c812102ca7114b6a896ab2", "degree": 1, "cluster": 2},
+    {"id": "0x1a7cdbe02028bb1ed407ceaa3a3de638637059c2", "degree": 4, "cluster": 2},
+    {"id": "0xb6728bff344e2109dbb3a0c153cad65ec4bdb736", "degree": 3, "cluster": 2},
+    {"id": "0x82e0b8cdd80af5930c4452c684e71c861148ec8a", "degree": 1, "cluster": 2},
+    {"id": "0x9cde019f455b9a3c33d95912edceabbe0cad3444", "degree": 1, "cluster": 2},
+    {"id": "0xfab46e002bbf0b4509813474841e0716e6730136", "degree": 3, "cluster": 2},
+    {"id": "0x914643668d83c1eeef33fd8286bf514a9dea498e", "degree": 2, "cluster": 2},
+    {"id": "0x1963efb3b756e7d17d0e54645339e7e037705cc1", "degree": 1, "cluster": 2},
+    {"id": "0x7492e30d60d96c58ed0f0dc2fe536098c620c4c0", "degree": 1, "cluster": 2},
+    {"id": "0xa48ca8074a323618f6a0654506979d6c153e3612", "degree": 1, "cluster": 2},
+    {"id": "0xdcbed9cf88384a7b2fa8ab5d02e35fafe523bae1", "degree": 2, "cluster": 2},
+    {"id": "0xd923af5d509042a3b24b711caaba8c408d4d4c23", "degree": 2, "cluster": 2},
+    {"id": "0xe1b81cd6a494cbca06a8e2055a62c2cf0fa5a8ac", "degree": 2, "cluster": 2},
+    {"id": "0xce4f341622340d56e397740d325fd357e62b91cb", "degree": 3, "cluster": 2},
+    {"id": "0xd95a1969c41112cee9a2c931e849bcef36a16f4c", "degree": 2, "cluster": 2},
+    {"id": "0xca1cbe8a0499a34c28d0b35bc62dec71a74c98ea", "degree": 1, "cluster": 2},
+    {"id": "0x44e94034afce2dd3cd5eb62528f239686fc8f162", "degree": 4, "cluster": 2},
+    {"id": "0x286e531f363768fed5e18b468f5b76a9ffc33af5", "degree": 1, "cluster": 2},
+    {"id": "0x0fe66e38e81dde40134454d7af433fe6ddb537d9", "degree": 1, "cluster": 2},
+    {"id": "0x448a4d98a8447812d3d55c854e2916241a04c2f8", "degree": 1, "cluster": 2},
+    {"id": "0x6309ebd1a107b0d0df51926dc1ffbf0756ec8cd3", "degree": 1, "cluster": 2},
+    {"id": "0x000000000000ad05ccc4f10045630fb830b95127", "degree": 2, "cluster": 2},
+    {"id": "0xad5ba4029e65096ccc22933bbe95bd27f0f03734", "degree": 2, "cluster": 2},
+    {"id": "0x60f95e81408a974dd35aad8b504862b290d0ed5f", "degree": 1, "cluster": 2},
+    {"id": "0xd9ddf01163a45b69b8cdbffd635a7405fb39a516", "degree": 2, "cluster": 2},
+    {"id": "0x0e33fd2db4f140dca8f65671c40e36f8fd648fff", "degree": 2, "cluster": 2},
+    {"id": "0xe98550a9c13d6f0a90d60727be265ee11c4d2906", "degree": 1, "cluster": 2},
+    {"id": "0xb3c7b1f310e2325b15b53c9fba257d0330a2e315", "degree": 1, "cluster": 2},
+    {"id": "0xa186d739ca2b3022b966194004c6b01855d59571", "degree": 1, "cluster": 2},
+    {"id": "0x31d843b99c2c4088cd20d96ef2426673b958ff70", "degree": 2, "cluster": 2},
+    {"id": "0xf2d15c0a89428c9251d71a0e29b39ff1e86bce25", "degree": 1, "cluster": 2},
+    {"id": "0x5283d291dbcf85356a21ba090e6db59121208b44", "degree": 1, "cluster": 2},
+    {"id": "0x61eed26ff29a7bf800604f3b73e1028e44fbeaf9", "degree": 1, "cluster": 2},
+    {"id": "0x672664ccad533401066ebb70361c93c4ca567de0", "degree": 2, "cluster": 2},
+    {"id": "0x469788fe6e9e9681c6ebf3bf78e7fd26fc015446", "degree": 2, "cluster": 2},
+    {"id": "0x2b174160cd285951ae4c2cda33d3e1d298b30a9a", "degree": 1, "cluster": 2},
+    {"id": "0xc91a71a1ffa3d8b22ba615ba1b9c01b2bbbf55ad", "degree": 1, "cluster": 2},
+    {"id": "0xe5c04c954c5494f6975f63e3f19957a380648f82", "degree": 74, "cluster": 3},
+    {"id": "0x283af0b28c62c092c9727f1ee09c02ca627eb7f5", "degree": 3, "cluster": 3},
+    {"id": "0x084b1c3c81545d370f3634392de611caabff8148", "degree": 1, "cluster": 3},
+    {"id": "0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85", "degree": 5, "cluster": 3},
+    {"id": "0x74312363e45dcaba76c59ec49a7aa8a65a67eed3", "degree": 2, "cluster": 3},
+    {"id": "0x59728544b08ab483533076417fbbb2fd0b17ce3a", "degree": 3, "cluster": 3},
+    {"id": "0x4ad3785ec7eed7589fa86538244a4530f962434f", "degree": 2, "cluster": 3},
+    {"id": "0xe1d8dda05beb37603a608cc21dee6fd92a0a727e", "degree": 2, "cluster": 3},
+    {"id": "0xc19003f7b1bd00bb86759c57110fdc90067ddfce", "degree": 11, "cluster": 3},
+    {"id": "0x8216874887415e2650d12d53ff53516f04a74fd7", "degree": 3, "cluster": 3},
+    {"id": "0x2de87c6f15bc8b3af69443e5274302d02d55a38c", "degree": 3, "cluster": 3},
+    {"id": "0x932261f9fc8da46c4a22e31b45c4de60623848bf", "degree": 1, "cluster": 3},
+    {"id": "0xa462127735352b1f03da8ab92a87803d05cc6a7b", "degree": 3, "cluster": 3},
+    {"id": "0xc3698444a79830c1f9de4e4d40dea06f5acb3353", "degree": 2, "cluster": 3},
+    {"id": "0x00000000006c3852cbef3e08e8df289169ede581", "degree": 1, "cluster": 3},
+    {"id": "0xae060def157558f471407c31cbac0644472de1c4", "degree": 3, "cluster": 3},
+    {"id": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e", "degree": 1, "cluster": 3},
+    {"id": "0xa1e33ec8767361f2045694bb3327a1de88d9a037", "degree": 1, "cluster": 3},
+    {"id": "0x8bc90377daf1b4e71686d025c88b2178089cf3e8", "degree": 1, "cluster": 6},
+    {"id": "0x1a26db1b2baf0b23f18e19375e8fdc159feb707e", "degree": 1, "cluster": 6},
+    {"id": "0x43da6d2db9651b7042e31ffb2607a7cfa4d5d03b", "degree": 1, "cluster": 6},
+    {"id": "0x1e29e2cefd3395d892678add3eb791ed74114f3b", "degree": 2, "cluster": 6},
+    {"id": "0x6e8b6af9d8b402d89d1f5d8c1cf535850dc28b98", "degree": 1, "cluster": 6},
+    {"id": "0xbfa93e1067ebabdc6b648ff7bdc45602fd37b61a", "degree": 3, "cluster": 5},
+    {"id": "0x45804880de22913dafe09f4980848ece6ecbaf78", "degree": 4, "cluster": 5},
+    {"id": "0x9b8dda29d117d794fb7c5efe25bf764a022d40d2", "degree": 44, "cluster": 5},
+    {"id": "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984", "degree": 1, "cluster": 6},
+    {"id": "0xa16f139337836df3458652cce7776a4994dba719", "degree": 10, "cluster": 5},
+    {"id": "0x61001ef5ec6fb84f80f7dd604a84756213120565", "degree": 1, "cluster": 6},
+    {"id": "0xeedc4487d12982cae7af7e0f31bbc493fe41d0ec", "degree": 1, "cluster": 6},
+    {"id": "0x5c74b7b08a8991d2d1903e381355513b0b39776b", "degree": 1, "cluster": 6},
+    {"id": "0x56042da9b90d2944b428c5fe71b9872f5d3c474f", "degree": 1, "cluster": 6},
+    {"id": "0xb54b03cfca57624d360c2182d4e053b3fde14392", "degree": 1, "cluster": 6},
+    {"id": "0x47dd5fbebcc5fc73bf64654cca88cc20f04bf9c7", "degree": 1, "cluster": 6},
+    {"id": "0x3e1620ec5161a514638cdbb803c1c627b0ae76e4", "degree": 1, "cluster": 6},
+    {"id": "0xe37b8ba0f77c31857f5ee7b08b996271dd781cd4", "degree": 1, "cluster": 6},
+    {"id": "0x71d3615264203641844fce3b26b58e806a828c07", "degree": 1, "cluster": 6},
+    {"id": "0x9112e4c33af6a2003a8e785b2ec29d19539e41e3", "degree": 1, "cluster": 6},
+    {"id": "0x65798e5c90a332bbfa37c793f8847c441df42d44", "degree": 1, "cluster": 6},
+    {"id": "0x3bbdc2f745bd3148bbd21444c87d352fd7b2ddbe", "degree": 1, "cluster": 6},
+    {"id": "0x1ec95c848a12f65288b075393f68dec4de9a969d", "degree": 1, "cluster": 6},
+    {"id": "0xfaae91b5d3c0378ee245e120952b21736f382c59", "degree": 1, "cluster": 6},
+    {"id": "0x88d19b31f45e275508d616dce198830445501561", "degree": 1, "cluster": 6},
+    {"id": "0x28b50243721330af6dc8a94e119b6c6c9ccf5fb9", "degree": 1, "cluster": 6},
+    {"id": "0xaab910acdd01af491179bb7c91a56080f764c8e1", "degree": 1, "cluster": 6},
+    {"id": "0x4e142a29782cc57274663da652f1ac4505d1b179", "degree": 1, "cluster": 6},
+    {"id": "0xeb72a1a8b1b566c5ea953dab95b593d23b347787", "degree": 1, "cluster": 6},
+    {"id": "0x036041d82b9a7d1a4d23cb2a96f5126341f1ce7b", "degree": 1, "cluster": 6},
+    {"id": "0x005a166d32f9d5fa6deec4ffef8dd40cd3b835b6", "degree": 1, "cluster": 6},
+    {"id": "0x47c5939356f1ccb1ea060d7811e6f2e71530dca6", "degree": 1, "cluster": 6},
+    {"id": "0x711390747ba3a7ad80346a373a5db118d57578e5", "degree": 1, "cluster": 6},
+    {"id": "0xa311057d28a93038278e5cef7b86f035b25be3c9", "degree": 1, "cluster": 6},
+    {"id": "0x4c6518441a4aa8c42d2e760c62ff9e082d884a4e", "degree": 1, "cluster": 6},
+    {"id": "0x34ad3b0fc3dd53092df1fda79d04ddf210fba1ba", "degree": 1, "cluster": 6},
+    {"id": "0x2adcb204d23e6983704b6c8b879a921f6d65bbb9", "degree": 1, "cluster": 6},
+    {"id": "0x4e928b122bf8b38846a54515e950356a224b2405", "degree": 1, "cluster": 6},
+    {"id": "0xa53fcbe483f02a799a70aa48a9dddde4c1814a0c", "degree": 1, "cluster": 6},
+    {"id": "0x8e8adeb64bcd257fdd83645296045094d0cc1845", "degree": 1, "cluster": 6},
+    {"id": "0xeedfcd5c46bc2932014fe3b551e3bf124348cf16", "degree": 1, "cluster": 6},
+    {"id": "0xb162335e18ee6bcd5df8302056583bcacaf0c950", "degree": 1, "cluster": 6},
+    {"id": "0x6dc3198775a1f0d2545e53c25be732ec8ddf92fb", "degree": 1, "cluster": 6},
+    {"id": "0x46caa192cdfcd561eab13e6020ca490905cf2e42", "degree": 1, "cluster": 6},
+    {"id": "0x232fc1098433c6096f75500332a9dbe9441513b6", "degree": 1, "cluster": 6},
+    {"id": "0x8a47bc5b775a2139fafc18a67823f6f59154ba1c", "degree": 1, "cluster": 6},
+    {"id": "0x84911fa6e2b2867cff600915644ca66000000000", "degree": 1, "cluster": 6},
+    {"id": "0x0f01e63a0b4bc08d80666738d2bd3f710c92f6b6", "degree": 1, "cluster": 6},
+    {"id": "0x0b449b1be3273db7395bebcab1ad26d63c5901a2", "degree": 1, "cluster": 6},
+    {"id": "0xd458cb00aa70b4664177f9657e3f9a1021656219", "degree": 1, "cluster": 6},
+    {"id": "0xb171f02695e6d315f12fe1d4b7b30cd6c60fe722", "degree": 1, "cluster": 6},
+    {"id": "0xb4f4067e5b6b829e739e3518934b3e03d508ec03", "degree": 1, "cluster": 6},
+    {"id": "0x2604bb59a1fb727caaef59431a0a72b86f3a423e", "degree": 1, "cluster": 6},
+    {"id": "0xa6e3c5cf6f3705d8733ae050d586de3a628bd6ed", "degree": 1, "cluster": 6},
+    {"id": "0xae5948a2c7463379e50b08f063c6da70ca6c27ab", "degree": 1, "cluster": 6},
+    {"id": "0xfc874480a2802409f3e9f5a5f38504c579499136", "degree": 1, "cluster": 6},
+    {"id": "0x113ab887ea42f10b3bd542da8dd26171318f5cd6", "degree": 1, "cluster": 6},
+    {"id": "0x2d1ea909d1f0a525edacdd7e78c9818415ed1646", "degree": 1, "cluster": 6},
+    {"id": "0x3817d38528f58a93fa8dfa0effb102431934ead1", "degree": 1, "cluster": 6},
+    {"id": "0xdcd1e31ec19e30ad1c08639247518022344e34d5", "degree": 1, "cluster": 6},
+    {"id": "0xde694cdb91d4091cc9cbac110d87b95eac3184dd", "degree": 1, "cluster": 6},
+    {"id": "0x06a2e52b61fb7e909f413e4513360790c9d07ef1", "degree": 1, "cluster": 6},
+    {"id": "0x0ee29986fc5dc64a68d4bab12deb8bf49e8b2ad3", "degree": 1, "cluster": 6},
+    {"id": "0x3893fd752089b2ecf2c091e2dc538f4a6b873db5", "degree": 1, "cluster": 6},
+    {"id": "0x51e3b7d7a42a3b0b2147b94dec8574583c725945", "degree": 1, "cluster": 6},
+    {"id": "0xa4b9f41175247657615160536e5c6f2dbfab3684", "degree": 1, "cluster": 6},
+    {"id": "0xee36a86b6a830548345b6ab0af868cf860b58292", "degree": 1, "cluster": 6},
+    {"id": "0x1816a967824534a4b54ef3370d165601a2e7fa8b", "degree": 1, "cluster": 6},
+    {"id": "0x08e8ff8e67bcfd0dee23e7fbf742911bfbb06f81", "degree": 1, "cluster": 6},
+    {"id": "0xa11ab78d4aa5d16c98bc5d4b6a8af6963c98116a", "degree": 1, "cluster": 6},
+    {"id": "0x543ed09f37236c1f289542b653b831c09631da3e", "degree": 1, "cluster": 6},
+    {"id": "0xa31f7d668aa4812c30d7473f0deccb83456ae1cf", "degree": 1, "cluster": 6},
+    {"id": "0x6f95477393b142296f6e8e79dfd56cef967bc729", "degree": 1, "cluster": 6},
+    {"id": "0x85f744bd978636b560965c56dfd459773fea681f", "degree": 1, "cluster": 6},
+    {"id": "0xe4a506bb6ac29b188346bc1c552191ec7530a958", "degree": 1, "cluster": 6},
+    {"id": "0x284df0a07391b92656295d5f862425901ecbaaa7", "degree": 1, "cluster": 6},
+    {"id": "0xdc35c2e0ba72de06c2ad4220bfe5666981a0de45", "degree": 1, "cluster": 6},
+    {"id": "0xd1c87a90455f2765be275c506738c026b011a6c8", "degree": 1, "cluster": 6},
+    {"id": "0xbdb6164d0c713ac5acd3d98d45cc5420abdd5dbd", "degree": 1, "cluster": 6},
+    {"id": "0x52dc55b9a0bcae41d60bbef10b9838e052ddca67", "degree": 1, "cluster": 6},
+    {"id": "0x1922049d729a1e352f4eda0e4ecd536de0069754", "degree": 1, "cluster": 6},
+    {"id": "0x0c22cd6eb3d16489fb19af18b3603d571e8bac46", "degree": 1, "cluster": 6},
+    {"id": "0xc5bada5e0870b2fb92a5a455827cd074f77f0c73", "degree": 1, "cluster": 6},
+    {"id": "0x6a932f0ae2a7a49fb24b70c8eef6ec0808163345", "degree": 1, "cluster": 6},
+    {"id": "0x4ac71d32f26832b21535e677366020b3ee4b2a31", "degree": 1, "cluster": 6},
+    {"id": "0x704d1add35b8efefc04adbc18d34422b90e336e7", "degree": 1, "cluster": 6},
+    {"id": "0x5fbf43294edda687393e80c8f93ddedde6f4a011", "degree": 1, "cluster": 6},
+    {"id": "0xad573ade894f7bd2c86588ba81308c2f6674914a", "degree": 1, "cluster": 6},
+    {"id": "0xa3eda3b12782f22d7ab45bf48c432898a9bd55a3", "degree": 1, "cluster": 6},
+    {"id": "0xe41b974560854fac1fd6ffe712a389b800d8ff36", "degree": 1, "cluster": 6},
+    {"id": "0x6638a3cdde02683fa3f91b6aef7929988d00ceca", "degree": 1, "cluster": 6},
+    {"id": "0x2820316fa2fdad36fdef544251bec0688ebb259e", "degree": 1, "cluster": 6},
+    {"id": "0x9a9802f198c8bb7c50be849bdd436451fad96109", "degree": 1, "cluster": 6},
+    {"id": "0x25bfb3de82ddff7b44eadf4a3905c408006fbc55", "degree": 2, "cluster": 6},
+    {"id": "0xf629cbd94d3791c9250152bd8dfbdf380e2a3b9c", "degree": 1, "cluster": 6},
+    {"id": "0xc944e90c64b2c07662a292be6244bdf05cda44a7", "degree": 1, "cluster": 6},
+    {"id": "0x3845badade8e6dff049820680d1f14bd3903a5d0", "degree": 1, "cluster": 6},
+    {"id": "0xbbbbca6a901c926f240b89eacb641d8aec7aeafd", "degree": 1, "cluster": 6},
+    {"id": "0x514910771af9ca656af840dff83e8264ecf986ca", "degree": 1, "cluster": 6},
+    {"id": "0x64a2fa006f4acff7090a3b6b3d847917bcbd9d61", "degree": 3, "cluster": 5},
+    {"id": "0x15cc46e874d7d8b9c1535f0f7e5f719b63f22d54", "degree": 12, "cluster": 5},
+    {"id": "0x72433e5b7a34b7c3235c9fbaef1ef1ae9f0c9f5a", "degree": 5, "cluster": 5},
+    {"id": "0xc8d7899f22bc4995c8176e3f2a5ba3f5e87d95e5", "degree": 6, "cluster": 5},
+    {"id": "0xc55d12edf3502ed4847f1328e1d66b0e3f6b492f", "degree": 1, "cluster": 5},
+    {"id": "0x8b3468d420fc59034e4e84afa8ef847d3c9b2932", "degree": 6, "cluster": 5},
+    {"id": "0x89537c812278f0902fd260dad2389604fcb22356", "degree": 1, "cluster": 5},
+    {"id": "0xff1f2b4adb9df6fc8eafecdcbf96a2b351680455", "degree": 1, "cluster": 5}
+    ]
