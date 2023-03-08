@@ -45,7 +45,9 @@ def get_label(node_id):
 
 def get_color(node_id):
     return '#00BFFF'
-
+def get_size(degree):
+    default_node_size = 10
+    return default_node_size + 1.5 * int(degree)
 @check_method('POST')
 def analyze_view(request):
     with open("./data/position.txt", encoding="utf-8") as f:
@@ -84,12 +86,20 @@ def analyze_view(request):
             } for node in nodes]
     # 判断是否需要有label，是否需要换图标 具体函数自定义
     for node in nodes:
+        node["style"]  = {
+            "fill": node["color"]
+        }
+        node["size"] = get_size(node["degree"])
         if node["id"] in hacker_list_no_icon:
-            node["type"] = "image"
-            node["img"] = "https://raw.githubusercontent.com/Liuyushiii/img/master/warning.png"
-            node["clipCfg"] = {
-            "show": 'true',
-            "type": 'circle',
+            node["style"] = {
+                "fill": "#D40202",
+                "lineWidth": 0
+            }
+            node["icon"] = {
+                "show": True,
+                "img": "https://raw.githubusercontent.com/Liuyushiii/img/master/inner_warning.png",
+                "width": node["size"] * 0.8,
+                "height": node["size"] * 0.8
             }
             continue
         have_label, label = get_label(node["id"])
@@ -97,18 +107,26 @@ def analyze_view(request):
             node["label"] = label
             # image
             if label == "Hacker Wallet":
-                node["type"] = "image"
-                node["img"] = "https://raw.githubusercontent.com/Liuyushiii/img/master/warning.png"
-                node["clipCfg"] = {
-                "show": 'true',
-                "type": 'circle',
+                node["style"] = {
+                    "fill": "#D40202",
+                    "lineWidth": 0
+                }
+                node["icon"] = {
+                    "show": True,
+                    "img": "https://raw.githubusercontent.com/Liuyushiii/img/master/inner_warning.png",
+                    "width": node["size"] * 0.8,
+                    "height": node["size"] * 0.8
                 }
             elif label == "Tornado.Cash":
-                node["type"] = "image"
-                node["img"] = "https://raw.githubusercontent.com/Liuyushiii/img/master/tornado.png"
-                node["clipCfg"] = {
-                "show": 'true',
-                "type": 'circle',
+                node["style"] = {
+                    "fill": "#000000",
+                    "lineWidth": 0
+                }
+                node["icon"] = {
+                    "show": True,
+                    "img": "https://raw.githubusercontent.com/Liuyushiii/img/master/inner_tornado.png",
+                    "width": node["size"] * 0.8,
+                    "height": node["size"] * 0.8
                 }
     return JsonResponse({
         'message': 'ok',
