@@ -89,6 +89,12 @@ def analyze_view(request):
         node["style"]  = {
             "fill": node["color"]
         }
+        node["labelCfg"]={
+            "style":{
+              "fontSize": 10,
+              "fontWeight": 800
+            }
+          }
         node["size"] = get_size(node["degree"])
         if node["id"] in hacker_list_no_icon:
             node["style"] = {
