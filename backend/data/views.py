@@ -205,29 +205,29 @@ def overview_view(request):
     with open("./data/overview-edges.json", encoding="utf-8") as f:
         edges = json.load(f)
         f.close()
-    # degree = {"1-5": 0, "6-10": 0, ">10" : 0}
-    # for node in nodes:
-    #     if node["degree"] <= 5:
-    #         degree["1-5"] += 1
-    #     elif node["degree"] <= 10:
-    #         degree["6-10"] += 1
-    #     else:
-    #         degree[">10"] += 1
-    # degree_list = [{"name": key, "value": degree[key]} for key in degree]
-    degree_list = [
-        {
-            "name": "1-5",
-            "value": 123
-        },
-        {
-            "name": "6-10",
-            "value": 94
-        },
-        {
-            "name": ">10",
-            "value": 49
-        }
-    ]
+    degree = {"1-5": 0, "6-10": 0, ">10" : 0}
+    for node in nodes:
+        if node["degree"] <= 5:
+            degree["1-5"] += 1
+        elif node["degree"] <= 10:
+            degree["6-10"] += 1
+        else:
+            degree[">10"] += 1
+    degree_list = [{"name": key, "value": degree[key]} for key in degree]
+    # degree_list = [
+    #     {
+    #         "name": "1-5",
+    #         "value": 123
+    #     },
+    #     {
+    #         "name": "6-10",
+    #         "value": 94
+    #     },
+    #     {
+    #         "name": ">10",
+    #         "value": 49
+    #     }
+    # ]
     # c = (
     #     Pie()
     #     .add(
