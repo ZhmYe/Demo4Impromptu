@@ -16,7 +16,7 @@ hacker_list = [
     "0xek1uci40xwi6y7aq9i2ghrs2uru0koepwvu8p32o"
 ]
 
-hacker_list_no_icon = [
+hacker_list_no_label = [
     "0xu1hdwc6cgr7cnv8xo8dvyvz6e2mwrp3rxtl7z9h5",
     "0xq9165xhiq9zc19syggqid8qorcd0hf4aqg9stbf7",
     "0xzrbay9r4h0ig96btyz421cxwwplwuye9hktgcei6", 
@@ -48,7 +48,9 @@ hacker_list_no_icon = [
     "0xiv2ewb87kgynqme25y3yc5l2ffq6amalhp6ddnds",
     "0x2s4we57yfga0z2uzpoq2e5i3fnsnsmep0bw2kfqb",
     "0xb7f68d5y61is14fcsdp5oah1gtaxb2atsdnri2ts",
-    "0x64tyyubdfoi9o9u4fb86p265tuvruwobb25rtge4"
+    "0x64tyyubdfoi9o9u4fb86p265tuvruwobb25rtge4",
+    "0xtkuqswz59lse7d6h23o1w6999kqybtod0xuwcr1l",
+    "0x8yplfwimnnygisxb07zpqw7ht3wgimg32h2hsdcp"
 ]
 cash_list = [
     "0xv290h0knxrksy39vt3m78rnpvkbeu291wlm23zaq", 
@@ -72,6 +74,11 @@ compromised_account_list_no_label = [
     "0xdnyyriydkcvbpz7u8yc7vxizl8a2916vxa0e757r"
 ]
 
+hash_list = [
+    '0xb08gcz30p2ohr2q120ukt3nxkcayvpflvxsqqz5463uetpo5e9x2am3xim4liaim',
+    '0xqxw1aqg2o2squgtv6r8xnae31bnhiqtblnr6wsqbrk0d5bzy4ypfw285d2b0vs4h'
+]
+
 def get_label(node_id):
     if node_id in hacker_list:
         return True, "Hacker Wallet"
@@ -87,7 +94,7 @@ def get_color(node_id):
 def get_size(degree):
     default_node_size = 10
     if degree == 1:
-        return default_node_size + 4 * int(degree)
+        return default_node_size + 5 * int(degree)
     return default_node_size + 2 * int(degree)
 
 @check_method('POST')
@@ -118,6 +125,16 @@ def analyze_view(request):
             degree_dic[edge["target"]] = 1
         else:
             degree_dic[edge["target"]] += 1
+        if edge["tx_hash"] in hash_list:
+            edge["style"] = {
+                "lineDash": [10, 3],
+                "stroke": "#FF7F00",
+                "endArrow": False,
+                # "endArrow": {
+                #     "stroke": "#FF7F00",
+                #     "fill": "#FF7F00"
+                # }
+            }
     # 得到nodes
     nodes = [{
                 "id": node, 'color': get_color(node), 
@@ -138,7 +155,7 @@ def analyze_view(request):
             }
           }
         node["size"] = get_size(node["degree"])
-        if node["id"] in hacker_list_no_icon:
+        if node["id"] in hacker_list_no_label:
             node["style"] = {
                 "fill": "#D40202",
                 "lineWidth": 0
