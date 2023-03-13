@@ -11,62 +11,56 @@ from pyecharts.faker import Faker
 # 颜色和label
 
 hacker_list = [
-    "0xq9165xhiq9zc19syggqid8qorcd0hf4aqg9stbf7",
-    "0xzrbay9r4h0ig96btyz421cxwwplwuye9hktgcei6", 
-    "0x2imicclza5go3i5486ysxik00rubwft3x5qvdtbo",
-    "0xv2ki4alnx4yb2yenpbz29i1g4l5wdeksefgygnpi",
+    "0xc611952d81e4ecbd17c8f963123dec5d7bce1c27",
+    "0xbfa93e1067ebabdc6b648ff7bdc45602fd37b61a",
+    "0xpzbn6l6oymcw155mxgrr6wuioyvu5koig1it59s0",
+    "0xa16f139337836df3458652cce7776a4994dba719",
+    "0x15cc46e874d7d8b9c1535f0f7e5f719b63f22d54",
+    "0xlldgwd2y1glpv8x0vq7vlad63grqnbbqbt649z25",
+    "0x9b8dda29d117d794fb7c5efe25bf764a022d40d2",
     "0x8epddqq2h4421ul1zhfovgg1gy5uamhryqd3dw0x",
-    "0xcwy0z29i4ybxwkyu0c18xamyauvgmndh5hivkd6u",
-    "0xx2zfq2etghz5fk6nd9z23g2gdugmp02fhq2r3s1t", 
-    "0xfgv113xtch13o0xxmf6cyyrck4s3znzmpt7vrhkw",
-    "0xngbqzb1kqrlt2shlg2qf9kccpg9suxmp0wwg4q3l", 
-    "0xtqc65crrf0kubu0srryz8p6ly53gueua4327xbyo",
-    "0xas1mdflghu6bhp7aek82xgrlhpdecflcg3x8gg6c",
-    "0xh5x5akaqcazn4d02co6h5rfi6fulbxgzc5wbokdg",
-    "0x1um57pklnowgdecxlww522020baaxke9ov1u3aqh",
-    "0xwrld11u6q93i36rxadpuurx5gd3iskolh67r7v8a",
-    "0x5vrba0g63coa3wllpvspgvz1pz7h17lc55k8ooz2",
-    "0xam1ehzm4pg5100pf7tztm0glhfmq569587dl86dr",
-    "0xwxr5p5gz4x94p2m22hdx0k9kr252dkl0rzygzd67",
-    "0xd2nsop1hhrl456w7nxl45eub3zr5cwnp2x1xokha",
-    '0xlyyt62z2v3woth9w01fs8rmk8vrbt7uufo6sbgvp',
-    "0xs3e2rdf1y2efpu2upzv8doqsfy146ytk9xny0kyw",
-    "0xnr62pgzat5tqdn4kua0b8t9mayti979pn1ed605w",
-    "0xp5mv6tktrnvgeawzgnr5yphlk0l43n5bu2l37zcv",
-    "0x97nt6cf1b8e1rtgum2dsp8g6qqpbr4rl2n7t7h8c",
-    "0xgposci88dokdpf8z2n665rw77nsk6z6ko91d3f5t",
-    "0xiv2ewb87kgynqme25y3yc5l2ffq6amalhp6ddnds",
-    "0x2s4we57yfga0z2uzpoq2e5i3fnsnsmep0bw2kfqb",
-    "0xb7f68d5y61is14fcsdp5oah1gtaxb2atsdnri2ts",
-    "0x64tyyubdfoi9o9u4fb86p265tuvruwobb25rtge4",
-    "0x12toapnwhlkqzddrz2wlsesignw9xkg5pamziuhb",
-    "0xc611952d81e4ecbd17c8f963123dec5d7bce1c27"
+    "0xv2ki4alnx4yb2yenpbz29i1g4l5wdeksefgygnpi",
+    "0xd90e2f925da726b50c4ed8d0fb90ad053324f31b",
+    "0xc55d12edf3502ed4847f1328e1d66b0e3f6b492f",
+    "0xa16f139337836Df3458652CcE7776a4994dba719",
+    "0xg48y58ocz4o00qzat8ugqywqr7v6ghxrsfxyzo7o",
+    "0x1e76cpsd57tgo2nfqr3osko0c88rh29zm0ffl4fq",
+    "0x13Ebe7F59E87fE12850c26eAf27812736104d3F9"
 ]
-cash_list = [
-    "0xv290h0knxrksy39vt3m78rnpvkbeu291wlm23zaq", 
-    "0xf1r2wf53o45mqg6empwyy58mdlg559tvbbv969r1"]
+
+hacker_list_label = [
+    "0xc611952d81e4ecbd17c8f963123dec5d7bce1c27",
+    "0x9b8dda29d117d794fb7c5efe25bf764a022d40d2"
+]
 
 compromised_account_list = [
-    "0xgqkw5myorew58nmzg8syxi2n7ptdg92ye8y182di",
-    "0xbvdywe6mgb2vdzth6612v0mc48sgdzypslxow4y9",
-    "0xruewzunvdg5fu5ec6manwl9a9ygu96pgo1t8gh0w",
-    "0xgnio6knh6g19n1kr2c0ghm0h4o2f5euxxgq7qsg2",
-    "0x692emmr9v2h7mwxmx3crlgrmqgcvwyu7ox3edoy7",
-    "0xu44g25s4vnqbuxnfsm0poiy31ind6za5gyww17ig",
-    "0x6vfr6tofrkbst1l7i1v0idwagte8stz6t04vu1gh",
-    "0x021cgduyftudedt7pyuftwmkrv697a7lb4wp75v4",
-    "0xrdio71fas6lhdii52w5qsyoods7kpkbqo7oximgw",
-    "0xnx12ao5hssauky5q0tdv8ga8giqz29acb6nzsshy",
-    "0xdnyyriydkcvbpz7u8yc7vxizl8a2916vxa0e757r",
-    "0xek1uci40xwi6y7aq9i2ghrs2uru0koepwvu8p32o",
-    "0x78hnrbubw5688gyymwwnwuhamruq5b6t67utldpg",
-    "0xtkuqswz59lse7d6h23o1w6999kqybtod0xuwcr1l",
-    "0x6o5v6hnm6rb0v330mwowsvwxpssqw7ry8rrxvt27",
+    "0x8bc90377daf1b4e71686d025c88b2178089cf3e8",
+    "0x1a26db1b2baf0b23f18e19375e8fdc159feb707e",
+    "0x43da6d2db9651b7042e31ffb2607a7cfa4d5d03b",
+    "0x47537db3dfec13e9f20fb4f4cd0cf26e2cc37fdd",
+    "0xe5c04c954c5494f6975f63e3f19957a380648f82",
+    "0x795d8f8b2bf1bb23e99e165c8e4fa067d96cb00a",
+    "0x1e29e2cefd3395d892678add3eb791ed74114f3b",
+    "0x75cd2467f8dd731a5acb927bd79c4cb361210db6",
+    "0xbdf4cf8269c3883dd88975e1978a6aa9d3877f2e",
+    "0x4842336fdaf0405e12c7e968dc1998856672a4d7",
+    "0x6e8b6af9d8b402d89d1f5d8c1cf535850dc28b98",
+    "0xa789d472cfef01e09674e4a6c03b35c72e0bfdb0",
+    "0x74de5d4fcbf63e00296fd95d33236b9794016631",
+    "0x72433e5b7a34b7c3235c9fbaef1ef1ae9f0c9f5a",
     "0x8yplfwimnnygisxb07zpqw7ht3wgimg32h2hsdcp",
-    "0xu1hdwc6cgr7cnv8xo8dvyvz6e2mwrp3rxtl7z9h5",
+    "0xo8rzggrfguipne1xk98zb4s30qrd3bdm8yuehel2",
     "0xco21vlgq2mtsc0qk64cpuvpbh2kmc074iwy8k7k9",
-    "0xlg2kqu9f7htvh2ux2dmgbvk1tw3vzkbgzim16wv4",  
-    "0x84bz5s4f7ecde5z9rhw36mo9kytz3g2rg4db8wad",
+    "0x8b3468d420fc59034e4e84afa8ef847d3c9b2932",
+    "0xg2p5nrshiyrwgl8w27hvp282gk07a5yfm8ltq28p"
+]
+
+usdt_list = [
+    "0x8cc6df6fbd4f9fcce78261decea12614df3017646e53167173fe894ba726341f",
+    "0x123c0b2f9073460aa25d6a878ac64addc753eeb055ff164933873d2b0399f8d60",
+    "0xb13d10c552402b5c9db2a44ccd35277431d84b7bd1a9513ec75f9ac2ab1d3ecc",
+    "0xeb2d1da9a194cc627a56e8fc9e386c8d2fa64733e382b397a7ce36f59debdfd9",
+    "0xeb2d1da9a194cc627a56e8fc9e386c8d2fa64733e382b397a7ce36f59debdfd9"
 ]
 
 def get_label(node_id):
@@ -85,6 +79,12 @@ def get_size(degree):
         return default_node_size + 5 * int(degree)
     return default_node_size + 2 * int(degree)
 
+def get_suffix(tx_hash):
+    if tx_hash in usdt_list:
+        return 'USDT'
+    else:
+        return "ETH"
+    
 @check_method('POST')
 def analyze_view(request):
     with open("./data/position.txt", encoding="utf-8") as f:
@@ -114,15 +114,20 @@ def analyze_view(request):
         else:
             degree_dic[edge["target"]] += 1
         # 配置label
-        edge["label"] = edge["value"] + ' eth'
+        edge["label"] = edge["value"] + ' ' + get_suffix(edge["tx_hash"])
         edge["labelCfg"] = {
             "refY": 5,
-            # "refX": 10,
             "style" : {
                 "fontSize" : 6,
                 "fontWeight" : 700
             }
         }
+        # edge["style"] = {
+        #     "endArrow": {
+        #         "path": "G6.Arrow.triangle(10, 20, 25)",
+        #         "d": 25
+        #     }
+        # }
     # 得到nodes
     nodes = [{
                 "id": node, 'color': get_color(node), 
@@ -134,7 +139,7 @@ def analyze_view(request):
     # 判断是否需要有label，是否需要换图标 具体函数自定义
     for node in nodes:
         node["style"]  = {
-            "fill": node["color"]
+            "fill": node["color"],
         }
         node["labelCfg"]={
             "style":{
@@ -154,19 +159,6 @@ def analyze_view(request):
                 "width": node["size"] * 0.8,
                 "height": node["size"] * 0.8
             }
-            continue
-        if node["id"] in cash_list:
-            node["style"] = {
-                "fill": "#000000",
-                "lineWidth": 0
-            }
-            node["icon"] = {
-                "show": True,
-                "img": "https://raw.githubusercontent.com/Liuyushiii/img/master/inner_tornado.png",
-                "width": node["size"] * 0.8,
-                "height": node["size"] * 0.8
-            }
-            continue
         if node["id"] in compromised_account_list:
             node["icon"] = {
                 "show": True,
@@ -174,41 +166,19 @@ def analyze_view(request):
                 "width": node["size"] * 0.8,
                 "height": node["size"] * 0.8
             }
-            continue    
-        # have_label, label = get_label(node["id"])
-        # if have_label:
-        #     node["label"] = label
-        #     # image
-        #     if label == "Hacker Wallet":
-        #         node["style"] = {
-        #             "fill": "#D40202",
-        #             "lineWidth": 0
-        #         }
-        #         node["icon"] = {
-        #             "show": True,
-        #             "img": "https://raw.githubusercontent.com/Liuyushiii/img/master/inner_warning.png",
-        #             "width": node["size"] * 0.8,
-        #             "height": node["size"] * 0.8
-        #         }
-        #     elif label == "Tornado.Cash":
-        #         node["style"] = {
-        #             "fill": "#000000",
-        #             "lineWidth": 0
-        #         }
-        #         node["icon"] = {
-        #             "show": True,
-        #             "img": "https://raw.githubusercontent.com/Liuyushiii/img/master/inner_tornado.png",
-        #             "width": node["size"] * 0.8,
-        #             "height": node["size"] * 0.8
-        #         }
-        #     elif label == "Compromised Account":
-        #         node["icon"] = {
-        #             "show": True,
-        #             "img": "https://raw.githubusercontent.com/Liuyushiii/img/master/wallet4.png",
-        #             "width": node["size"] * 0.8,
-        #             "height": node["size"] * 0.8
-        #         }
-                
+        if node["id"] in hacker_list_label:
+            id = node["id"]
+            firstChars = id[:5]
+            lastChars = id[-3:]
+            node["label"] = firstChars + '...' + lastChars
+            node["labelCfg"] = {
+                "position": "bottom",
+                "offset": 5,
+                "style" : {
+                    "fontSize": 10,
+                    "fontWeight": 700
+                }
+            }                
     return JsonResponse({
         'message': 'ok',
         "nodes": nodes,
@@ -223,14 +193,28 @@ def overview_view(request):
         edges = json.load(f)
         f.close()
     degree = {"1-5": 0, "6-10": 0, ">10" : 0}
+    
+    
+    
+    def get_size_overview(node_degree, base):
+        if node_degree <= 10:
+            return base * node_degree
+        else:
+            return base * 10 + get_size_overview(node_degree - 10, base/2)
+
+    
     for node in nodes:
+        node["size"] = 10 + get_size_overview(node["degree"], 2)
         if node["degree"] <= 5:
             degree["1-5"] += 1
         elif node["degree"] <= 10:
             degree["6-10"] += 1
         else:
             degree[">10"] += 1
+        
     degree_list = [{"name": key, "value": degree[key]} for key in degree]
+    
+
     # degree_list = [
     #     {
     #         "name": "1-5",
