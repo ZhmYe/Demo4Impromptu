@@ -193,12 +193,6 @@
     },
     {
         "source": "0xg48y58ocz4o00qzat8ugqywqr7v6ghxrsfxyzo7o", 
-        "target": "0x1e76cpsd57tgo2nfqr3osko0c88rh29zm0ffl4fq", 
-        "tx_hash": "0xeb2d1da9a194cc627a56e8fc9e386c8d2fa64733e382b397a7ce36f59debdfd9",
-        "value": "15000"
-    },
-    {
-        "source": "0xg48y58ocz4o00qzat8ugqywqr7v6ghxrsfxyzo7o", 
         "target": "0x13Ebe7F59E87fE12850c26eAf27812736104d3F9", 
         "tx_hash": "0xeb2d1da9a194cc627a56e8fc9e386c8d2fa64733e382b397a7ce36f59debdfd9",
         "value": "10000"

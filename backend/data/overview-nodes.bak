@@ -99,7 +99,10 @@
     {"id": "0x6638a3cdde02683fa3f91b6aef7929988d00ceca", "degree": 2, "cluster": -1},
     {"id": "0x2820316fa2fdad36fdef544251bec0688ebb259e", "degree": 18, "cluster": -1},
     {"id": "0x9a9802f198c8bb7c50be849bdd436451fad96109", "degree": 1, "cluster": -1},
+    {"id": "0x278a8453ecf2f477a5ab3cd9b0ea410b7b2c4182", "degree": 23, "cluster": -1},
     {"id": "0x73c5c58c8b1273c0fb121c65635a1b117e60aa12", "degree": 2, "cluster": -1},
+    {"id": "0x124450c697b932439b37a3fadee5d9167996685a", "degree": 8, "cluster": -1},
+    {"id": "0x271e93377046b80d6ddd9c3930311a387c5f6edd", "degree": 5, "cluster": -1},
     {"id": "0x4d7f1790644af787933c9ff0e2cff9a9b4299abb", "degree": 1, "cluster": -1},
     {"id": "0x33321e44c2861033fb80ad04f93e4ccd25f2beef", "degree": 4, "cluster": -1},
     {"id": "0xa1e33ec8767361f2045694bb3327a1de88d9a037", "degree": 6, "cluster": -1},
@@ -503,4 +506,4 @@
     {"id": "0xa9d1e08c7793af67e9d92fe308d5697fb81d3e43", "degree": 3, "cluster": -1},
     {"id": "0x3cd751e6b0078be393132286c442345e5dc49699", "degree": 1, "cluster": -1},
     {"id": "0x939953e2c34cf1936acd175151ea93d06b0c0cdd", "degree": 1, "cluster": -1}
-]
+    ]
