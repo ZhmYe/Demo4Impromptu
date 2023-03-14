@@ -71,9 +71,8 @@ star_list = [
 
 usdc_list = [
     "0x8cc6df6fbd4f9fcce78261decea12614df3017646e53167173fe894ba726341f",
-    "0x123c0b2f9073460aa25d6a878ac64addc753eeb055ff164933873d2b0399f8d60",
+    "0x123c0b2f9073460aa25d6a878ac64addc753eeb055ff164933873d2b0399f8d6",
     "0xb13d10c552402b5c9db2a44ccd35277431d84b7bd1a9513ec75f9ac2ab1d3ecc",
-    "0xeb2d1da9a194cc627a56e8fc9e386c8d2fa64733e382b397a7ce36f59debdfd9",
     "0xeb2d1da9a194cc627a56e8fc9e386c8d2fa64733e382b397a7ce36f59debdfd9",
     "0x48ec9f018ba2c05ce0c6565a8707f06bea3f69df52e32379a505d9e4509fa240"
 ]
@@ -137,9 +136,20 @@ def analyze_view(request):
                 "fontWeight" : 700
             }
         }
+        # edge["style"] = {
+        #     "stroke": "#000000",
+        #     "lineWidth" : 1
+        # }
         if edge["tx_hash"] in usdc_list:
             edge["style"] = {
-                "lineDash": [7, 3] 
+                "stroke": "#317ACA",
+                "lineWidth": 1.5,
+                # "lineDash": [7, 3],
+                "endArrow":{
+                    "fill": "#317ACA",
+                    "stroke": "#317ACA",
+                    # "lineWidth": 1,
+                }
             }
     # 得到nodes
     nodes = [{
