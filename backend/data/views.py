@@ -238,6 +238,11 @@ def analyze_view(request):
     })
 @check_method('POST')
 def overview_view(request):
+    with open('./data/position.json', encoding="utf-8") as f:
+        node_position = json.load(f)
+    position_dic = {}
+    for node_info in node_position:
+        position_dic[node_info["id"]] = {"x": node_info["x"], "y": node_info["y"]}
     with open("./data/overview-nodes.json", encoding="utf-8") as f:
         nodes = json.load(f)
         f.close()
@@ -257,6 +262,8 @@ def overview_view(request):
     
     for node in nodes:
         node["size"] = 10 + get_size_overview(node["degree"], 2)
+        node["x"] = position_dic[node["id"]]["x"]
+        node["y"] = position_dic[node["id"]]["y"]
         if node["degree"] <= 5:
             degree["1-5"] += 1
         elif node["degree"] <= 10:
