@@ -11,7 +11,7 @@ from pyecharts.faker import Faker
 # 颜色和label
 
 hacker_list = [
-    "0xc611952d81e4ecbd17c8f963123dec5d7bce1c27",
+    # "0xc611952d81e4ecbd17c8f963123dec5d7bce1c27",
     "0xbfa93e1067ebabdc6b648ff7bdc45602fd37b61a",
     "0xpzbn6l6oymcw155mxgrr6wuioyvu5koig1it59s0",
     "0xa16f139337836df3458652cce7776a4994dba719",
@@ -55,11 +55,26 @@ compromised_account_list = [
     "0xg2p5nrshiyrwgl8w27hvp282gk07a5yfm8ltq28p"
 ]
 
+suspicious_list = [
+    "0x72433e5b7a34b7c3235c9fbaef1ef1ae9f0c9f5a",
+    "0xlldgwd2y1glpv8x0vq7vlad63grqnbbqbt649z25",
+    "0x8yplfwimnnygisxb07zpqw7ht3wgimg32h2hsdcp",
+    "0xo8rzggrfguipne1xk98zb4s30qrd3bdm8yuehel2",
+    "0xco21vlgq2mtsc0qk64cpuvpbh2kmc074iwy8k7k9",
+    "0x8b3468d420fc59034e4e84afa8ef847d3c9b2932",
+    "0xg2p5nrshiyrwgl8w27hvp282gk07a5yfm8ltq28p"
+]
+
+star_list = [
+    "0xc611952d81e4ecbd17c8f963123dec5d7bce1c27"
+]
+
 usdt_list = [
     "0x8cc6df6fbd4f9fcce78261decea12614df3017646e53167173fe894ba726341f",
     "0x123c0b2f9073460aa25d6a878ac64addc753eeb055ff164933873d2b0399f8d60",
     "0xb13d10c552402b5c9db2a44ccd35277431d84b7bd1a9513ec75f9ac2ab1d3ecc",
-    "0xeb2d1da9a194cc627a56e8fc9e386c8d2fa64733e382b397a7ce36f59debdfd9"
+    "0xeb2d1da9a194cc627a56e8fc9e386c8d2fa64733e382b397a7ce36f59debdfd9",
+    "0x123c0b2f9073460aa25d6a878ac64addc753eeb055ff164933873d2b0399f8d6"
 ]
 
 def get_label(node_id):
@@ -121,12 +136,10 @@ def analyze_view(request):
                 "fontWeight" : 700
             }
         }
-        # edge["style"] = {
-        #     "endArrow": {
-        #         "path": "G6.Arrow.triangle(10, 20, 25)",
-        #         "d": 25
-        #     }
-        # }
+        if edge["tx_hash"] in usdt_list:
+            edge["style"] = {
+                "lineDash": [7, 3] 
+            }
     # 得到nodes
     nodes = [{
                 "id": node, 'color': get_color(node), 
@@ -165,14 +178,39 @@ def analyze_view(request):
                 "width": node["size"] * 0.8,
                 "height": node["size"] * 0.8
             }
+        if node["id"] in suspicious_list:
+            	
+            node["style"] = {
+                "fill": "#FF8247",
+                "lineWidth": 0
+            }
+            node["icon"] = {
+                "show": True,
+                "img": "https://raw.githubusercontent.com/Liuyushiii/img/master/question2.png",
+                "width": node["size"] * 1,
+                "height": node["size"] * 1
+            }
+            
+        if node["id"] in star_list: 	
+            node["style"] = {
+                "fill": "#50AF7F",
+                "lineWidth": 0
+            }
+            node["icon"] = {
+                "show": True,
+                "img": "https://raw.githubusercontent.com/Liuyushiii/img/master/star3.png",
+                "width": node["size"] * 0.8,
+                "height": node["size"] * 0.8
+            }
+            
         if node["id"] in hacker_list_label:
             id = node["id"]
             firstChars = id[:5]
-            lastChars = id[-3:]
-            node["label"] = firstChars + '...' + lastChars
+            lastChars = id[-2:]
+            node["label"] = firstChars + '..' + lastChars
             node["labelCfg"] = {
                 "position": "bottom",
-                "offset": 5,
+                "offset": 7,
                 "style" : {
                     "fontSize": 10,
                     "fontWeight": 700
@@ -214,36 +252,6 @@ def overview_view(request):
     degree_list = [{"name": key, "value": degree[key]} for key in degree]
     
 
-    # degree_list = [
-    #     {
-    #         "name": "1-5",
-    #         "value": 123
-    #     },
-    #     {
-    #         "name": "6-10",
-    #         "value": 94
-    #     },
-    #     {
-    #         "name": ">10",
-    #         "value": 49
-    #     }
-    # ]
-    # c = (
-    #     Pie()
-    #     .add(
-    #         "",
-    #         degree_list,
-    #         radius=["40%", "75%"],
-    #     )
-    #     .set_global_opts(
-    #         title_opts=opts.TitleOpts(title="Degree Distribution"),
-    #         legend_opts=opts.LegendOpts(orient="vertical", pos_top="15%", pos_left="2%"),
-    #     )
-    #     .set_series_opts(label_opts=opts.LabelOpts(formatter="{b}: {c}"))
-    #     # .render("pie_radius.html")
-    # )
-    # json_content = json.loads(c.dump_options())
-    # json_content["legend"]["left"] = "5%"
     return JsonResponse({
         'message': 'ok',
         "nodes": nodes,
