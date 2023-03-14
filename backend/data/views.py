@@ -69,12 +69,13 @@ star_list = [
     "0xc611952d81e4ecbd17c8f963123dec5d7bce1c27"
 ]
 
-usdt_list = [
+usdc_list = [
     "0x8cc6df6fbd4f9fcce78261decea12614df3017646e53167173fe894ba726341f",
     "0x123c0b2f9073460aa25d6a878ac64addc753eeb055ff164933873d2b0399f8d60",
     "0xb13d10c552402b5c9db2a44ccd35277431d84b7bd1a9513ec75f9ac2ab1d3ecc",
     "0xeb2d1da9a194cc627a56e8fc9e386c8d2fa64733e382b397a7ce36f59debdfd9",
-    "0x123c0b2f9073460aa25d6a878ac64addc753eeb055ff164933873d2b0399f8d6"
+    "0xeb2d1da9a194cc627a56e8fc9e386c8d2fa64733e382b397a7ce36f59debdfd9",
+    "0x48ec9f018ba2c05ce0c6565a8707f06bea3f69df52e32379a505d9e4509fa240"
 ]
 
 def get_label(node_id):
@@ -94,8 +95,8 @@ def get_size(degree):
     return default_node_size + 2 * int(degree)
 
 def get_suffix(tx_hash):
-    if tx_hash in usdt_list:
-        return 'USDT'
+    if tx_hash in usdc_list:
+        return 'USDC'
     else:
         return "ETH"
     
@@ -136,7 +137,7 @@ def analyze_view(request):
                 "fontWeight" : 700
             }
         }
-        if edge["tx_hash"] in usdt_list:
+        if edge["tx_hash"] in usdc_list:
             edge["style"] = {
                 "lineDash": [7, 3] 
             }
@@ -160,7 +161,7 @@ def analyze_view(request):
             }
           }
         node["size"] = get_size(node["degree"])
-        if node["id"] in hacker_list:
+        if node["id"] in star_list:
             node["style"] = {
                 "fill": "#D40202",
                 "lineWidth": 0
@@ -181,7 +182,7 @@ def analyze_view(request):
         if node["id"] in suspicious_list:
             	
             node["style"] = {
-                "fill": "#FF8247",
+                "fill": "#595959",
                 "lineWidth": 0
             }
             node["icon"] = {
@@ -191,26 +192,30 @@ def analyze_view(request):
                 "height": node["size"] * 1
             }
             
-        if node["id"] in star_list: 	
+        if node["id"] in hacker_list: 	
             node["style"] = {
-                "fill": "#50AF7F",
+                # "fill": "#50AF7F",
+                # "fill": "#9370DB",
+                # "fill": "#008B8B",
+                # "fill": "#8B658B",
+                "fill": '#FF8247',
                 "lineWidth": 0
             }
             node["icon"] = {
                 "show": True,
-                "img": "https://raw.githubusercontent.com/Liuyushiii/img/master/star3.png",
-                "width": node["size"] * 0.8,
-                "height": node["size"] * 0.8
+                "img": "https://raw.githubusercontent.com/Liuyushiii/img/master/hacker.png",
+                "width": node["size"] * 1,
+                "height": node["size"] * 1
             }
             
         if node["id"] in hacker_list_label:
             id = node["id"]
             firstChars = id[:5]
             lastChars = id[-2:]
-            node["label"] = firstChars + '..' + lastChars
+            node["label"] = firstChars + '...' + lastChars
             node["labelCfg"] = {
-                "position": "bottom",
-                "offset": 7,
+                "position": "top",
+                "offset": 8,
                 "style" : {
                     "fontSize": 10,
                     "fontWeight": 700
