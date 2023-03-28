@@ -8,6 +8,7 @@ from django.conf import settings
 from pyecharts import options as opts
 from pyecharts.charts import Pie
 from pyecharts.faker import Faker
+import requests
 # 颜色和label
 
 hacker_list = [
@@ -238,6 +239,20 @@ def analyze_view(request):
     })
 @check_method('POST')
 def overview_view(request):
+    post = get_post_json(request)
+    print(post)
+    # post: json,参数如下：
+        # address: [list, 所有账户]
+        # khop: int, k跳
+        # start_blk: int, start块
+        # end_blk: int, end块
+        # contracts: [list, 合约地址]
+        # timeInterval: int, time Interval
+        # valueDifference: int, value difference
+    url = "http://localhost:8000/data/overview/" # 这里把后面的Url补上包括端口，localhost:8010/路由/接口
+    # 下面是requests的两种请求
+        # response = requests.get(url, params=post) #这个是get请求，这里如果直接运行上面的Url,会有404因为我没有定义get接口（上面我封装了解释器check_method('POST'/'GET')），注意区分get和post
+        # response = requests.post(url, data=post) # 这个是post请求
     with open('./data/position.json', encoding="utf-8") as f:
         node_position = json.load(f)
     position_dic = {}
