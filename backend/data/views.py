@@ -253,6 +253,7 @@ def overview_view(request):
     # 下面是requests的两种请求
         # response = requests.get(url, params=post) #这个是get请求，这里如果直接运行上面的Url,会有404因为我没有定义get接口（上面我封装了解释器check_method('POST'/'GET')），注意区分get和post
         # response = requests.post(url, data=post) # 这个是post请求
+    #拿到response以后下面的内容按需保留修改，比如下面读取nodes和edges可能就不用了
     with open('./data/position.json', encoding="utf-8") as f:
         node_position = json.load(f)
     position_dic = {}
