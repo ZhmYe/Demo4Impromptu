@@ -249,22 +249,44 @@ def overview_view(request):
         # contracts: [list, 合约地址]
         # timeInterval: int, time Interval
         # valueDifference: int, value difference
-    url = "http://localhost:8000/data/overview/" # 这里把后面的Url补上包括端口，localhost:8010/路由/接口
+    # url = "http://localhost:8000/data/overview/" # 这里把后面的Url补上包括端口，localhost:8010/路由/接口
     # 下面是requests的两种请求
         # response = requests.get(url, params=post) #这个是get请求，这里如果直接运行上面的Url,会有404因为我没有定义get接口（上面我封装了解释器check_method('POST'/'GET')），注意区分get和post
         # response = requests.post(url, data=post) # 这个是post请求
     #拿到response以后下面的内容按需保留修改，比如下面读取nodes和edges可能就不用了
+    
+    url = "http://localhost:8010/"
+    response = requests.get(url, params=post)
+    headers = response.headers # 响应头信息，是一个字典对象
+    text = response.text # 响应体文本内容
+    encoding = response.encoding # 响应体编码格式，如UTF-8、GBK等
+    content = response.content # 响应体二进制数据，如图片、音频、视频等
+    # print("headers: ", headers)
+    print("text: ", text)
+    # print("encoding: ", encoding)
+    # print("content: ", content)
+    
+    # 将字符串解析成JSON格式
+    parsed_data = json.loads(text)
+
+    # 提取edges和nodes的数据
+    edges = parsed_data['edges']
+    nodes = parsed_data['nodes']
+    print(edges)
+    print(nodes)
+    
+    
     with open('./data/position.json', encoding="utf-8") as f:
         node_position = json.load(f)
     position_dic = {}
     for node_info in node_position:
         position_dic[node_info["id"]] = {"x": node_info["x"], "y": node_info["y"]}
-    with open("./data/overview-nodes.json", encoding="utf-8") as f:
-        nodes = json.load(f)
-        f.close()
-    with open("./data/overview-edges.json", encoding="utf-8") as f:
-        edges = json.load(f)
-        f.close()
+    # with open("./data/overview-nodes.json", encoding="utf-8") as f:
+    #     nodes = json.load(f)
+    #     f.close()
+    # with open("./data/overview-edges.json", encoding="utf-8") as f:
+    #     edges = json.load(f)
+    #     f.close()
     degree = {"1-5": 0, "6-10": 0, ">10" : 0}
     
     
