@@ -261,10 +261,6 @@ def overview_view(request):
     text = response.text # 响应体文本内容
     encoding = response.encoding # 响应体编码格式，如UTF-8、GBK等
     content = response.content # 响应体二进制数据，如图片、音频、视频等
-    # print("headers: ", headers)
-    print("text: ", text)
-    # print("encoding: ", encoding)
-    # print("content: ", content)
     
     # 将字符串解析成JSON格式
     parsed_data = json.loads(text)
@@ -272,15 +268,15 @@ def overview_view(request):
     # 提取edges和nodes的数据
     edges = parsed_data['edges']
     nodes = parsed_data['nodes']
-    print(edges)
-    print(nodes)
+    # print(edges)
+    # print(nodes)
     
     
-    with open('./data/position.json', encoding="utf-8") as f:
-        node_position = json.load(f)
-    position_dic = {}
-    for node_info in node_position:
-        position_dic[node_info["id"]] = {"x": node_info["x"], "y": node_info["y"]}
+    # with open('./data/position.json', encoding="utf-8") as f:
+    #     node_position = json.load(f)
+    # position_dic = {}
+    # for node_info in node_position:
+    #     position_dic[node_info["id"]] = {"x": node_info["x"], "y": node_info["y"]}
     # with open("./data/overview-nodes.json", encoding="utf-8") as f:
     #     nodes = json.load(f)
     #     f.close()
@@ -300,8 +296,8 @@ def overview_view(request):
     
     for node in nodes:
         node["size"] = 10 + get_size_overview(node["degree"], 2)
-        node["x"] = position_dic[node["id"]]["x"]
-        node["y"] = position_dic[node["id"]]["y"]
+        # node["x"] = position_dic[node["id"]]["x"]
+        # node["y"] = position_dic[node["id"]]["y"]
         if node["degree"] <= 5:
             degree["1-5"] += 1
         elif node["degree"] <= 10:
