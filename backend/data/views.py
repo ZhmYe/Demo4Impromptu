@@ -272,9 +272,6 @@ def overview_view(request):
     # # 提取edges和nodes的数据
     # edges = parsed_data['edges']
     # nodes = parsed_data['nodes']
-    # 提取edges和nodes的数据
-    edges = parsed_data['edges']
-    nodes = parsed_data['nodes']
     # print(edges)
     # print(nodes)
     
