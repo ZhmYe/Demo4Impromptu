@@ -276,11 +276,11 @@ def overview_view(request):
     print(nodes)
     
     
-    # with open('./data/position.json', encoding="utf-8") as f:
-    #     node_position = json.load(f)
-    # position_dic = {}
-    # for node_info in node_position:
-    #     position_dic[node_info["id"]] = {"x": node_info["x"], "y": node_info["y"]}
+    with open('./data/position.json', encoding="utf-8") as f:
+        node_position = json.load(f)
+    position_dic = {}
+    for node_info in node_position:
+        position_dic[node_info["id"]] = {"x": node_info["x"], "y": node_info["y"]}
     # with open("./data/overview-nodes.json", encoding="utf-8") as f:
     #     nodes = json.load(f)
     #     f.close()
