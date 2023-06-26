@@ -9,8 +9,27 @@ from pyecharts import options as opts
 from pyecharts.charts import Pie
 from pyecharts.faker import Faker
 import requests
-# 颜色和label
 
+class Edge:
+    def __init__(self, id, target, tx_hash, value):
+        self.source = source
+        self.target = target
+        self.tx_hash = tx_hash
+        self.value = value
+
+    def to_json(self):
+        return json.dumps(self.__dict__)
+    
+class Node:
+    def __init__(self, id, degree):
+        self.id = id
+        self.degree = degree
+        self.cluster = 0
+
+    def to_json(self):
+        return json.dumps(self.__dict__)
+
+# 颜色和label
 hacker_list = [
     # "0xc611952d81e4ecbd17c8f963123dec5d7bce1c27",
     "0xbfa93e1067ebabdc6b648ff7bdc45602fd37b61a",
@@ -255,38 +274,55 @@ def overview_view(request):
         # response = requests.post(url, data=post) # 这个是post请求
     #拿到response以后下面的内容按需保留修改，比如下面读取nodes和edges可能就不用了
     
-    # url = "http://localhost:8010/"
-    # response = requests.get(url, params=post)
-    # headers = response.headers # 响应头信息，是一个字典对象
-    # text = response.text # 响应体文本内容
-    # encoding = response.encoding # 响应体编码格式，如UTF-8、GBK等
-    # content = response.content # 响应体二进制数据，如图片、音频、视频等
-    # # print("headers: ", headers)
-    # print("text: ", text)
-    # # print("encoding: ", encoding)
-    # # print("content: ", content)
+    url = "http://localhost:8030/"
+    response = requests.get(url, params=post)
+    headers = response.headers # 响应头信息，是一个字典对象
+    text = response.text # 响应体文本内容
+    encoding = response.encoding # 响应体编码格式，如UTF-8、GBK等
+    content = response.content # 响应体二进制数据，如图片、音频、视频等
+    # print("headers: ", headers)
+    print("text: ", text)
+    # print("encoding: ", encoding)
+    # print("content: ", content)
     
     # # 将字符串解析成JSON格式
-    # parsed_data = json.loads(text)
+    parsed_data = json.loads(text)
 
     # # 提取edges和nodes的数据
-    # edges = parsed_data['edges']
+    edges = parsed_data['edges']
+    nodes_dict = dict()
+    nodes = list()
+    for edge in edges:
+        if nodes_dict.get(edge['source']) is None:
+            nodes_dict[edge['source']] = 1
+        else:
+            nodes_dict[edge['source']] = nodes_dict[edge['source']] + 1
+        if nodes_dict.get(edge['target']) is None:
+            nodes_dict[edge['target']] = 1
+        else:
+            nodes_dict[edge['target']] = nodes_dict[edge['target']] + 1
+    for (k,v) in nodes_dict.items():
+        nodes.append(Node(k,v).__dict__)      
+    for i in nodes:
+        print(i) 
     # nodes = parsed_data['nodes']
-    # print(edges)
-    # print(nodes)
+    # print("=====edges=====\n",edges)
+    # print("=====nodes=====\n",nodes)
+    # for i in edges:
+    #     print(type(i))
     
     
-    with open('./data/position.json', encoding="utf-8") as f:
-        node_position = json.load(f)
-    position_dic = {}
-    for node_info in node_position:
-        position_dic[node_info["id"]] = {"x": node_info["x"], "y": node_info["y"]}
-    with open("./data/overview-nodes.json", encoding="utf-8") as f:
-        nodes = json.load(f)
-        f.close()
-    with open("./data/overview-edges.json", encoding="utf-8") as f:
-        edges = json.load(f)
-        f.close()
+    # with open('./data/position.json', encoding="utf-8") as f:
+    #     node_position = json.load(f)
+    # position_dic = {}
+    # for node_info in node_position:
+    #     position_dic[node_info["id"]] = {"x": node_info["x"], "y": node_info["y"]}
+    # with open("./data/overview-nodes.json", encoding="utf-8") as f:
+    #     nodes = json.load(f)
+    #     f.close()
+    # with open("./data/overview-edges.json", encoding="utf-8") as f:
+    #     edges = json.load(f)
+    #     f.close()
     degree = {"1-5": 0, "6-10": 0, ">10" : 0}
     
     
@@ -300,8 +336,8 @@ def overview_view(request):
     
     for node in nodes:
         node["size"] = 10 + get_size_overview(node["degree"], 2)
-        node["x"] = position_dic[node["id"]]["x"]
-        node["y"] = position_dic[node["id"]]["y"]
+        # node["x"] = position_dic[node["id"]]["x"]
+        # node["y"] = position_dic[node["id"]]["y"]
         if node["degree"] <= 5:
             degree["1-5"] += 1
         elif node["degree"] <= 10:
