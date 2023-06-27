@@ -287,7 +287,7 @@ def overview_view(request):
     
     # # 将字符串解析成JSON格式
     parsed_data = json.loads(text)
-
+    print(parsed_data)
     # # 提取edges和nodes的数据
     edges = parsed_data['edges']
     nodes_dict = dict()
@@ -303,8 +303,8 @@ def overview_view(request):
             nodes_dict[edge['target']] = nodes_dict[edge['target']] + 1
     for (k,v) in nodes_dict.items():
         nodes.append(Node(k,v).__dict__)      
-    for i in nodes:
-        print(i) 
+    # for i in nodes:
+    #     print(i) 
     # nodes = parsed_data['nodes']
     # print("=====edges=====\n",edges)
     # print("=====nodes=====\n",nodes)
