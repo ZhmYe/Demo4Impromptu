@@ -22,5 +22,5 @@ urlpatterns = [
     # path('register/', views.register_view),
     # path('unregister/', views.unregister_view),
     path('analyze/', views.analyze_view),
-    path('overview/', views.overview_view)
+    # path('overview/', views.overview_view)
 ]
