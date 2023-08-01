@@ -45,11 +45,19 @@ def analyze(transactions, address, time_interval, valueDifference):
     filterEngine.load_transactions(transactions)
     filterEngine.filter_by_address(address)              
     return filterEngine.abnormal
+# todo
+# 2023/8/1 ZhmYe
+# 这里原本overview_view和analyze_view是分开来的，因为之前两个之前其实没啥关系都是定死的
+# 现在两个有关系了所以我在前后端都改成了一起
 @check_method('POST')
 def analyze_view(request):
+    total_nodes = []
+    total_edges = []
     global global_path
     post = get_post_json(request)
     print(post)
+    abnormal = []
+    abnormal_tx_hash = []
     # post: json,参数如下：
         # address: [list, 所有账户]
         # khop: int, k跳
@@ -64,25 +72,79 @@ def analyze_view(request):
         # response = requests.post(url, data=post) # 这个是post请求
     #拿到response以后下面的内容按需保留修改，比如下面读取nodes和edges可能就不用了
     
-    url = "http://localhost:8030/"
-    response = requests.get(url, params=post)
-    headers = response.headers # 响应头信息，是一个字典对象
-    text = response.text # 响应体文本内容
-    encoding = response.encoding # 响应体编码格式，如UTF-8、GBK等
-    content = response.content # 响应体二进制数据，如图片、音频、视频等
-    # print("headers: ", headers)
-    print("text: ", text)
-    # print("encoding: ", encoding)
-    # print("content: ", content)
+
+    # 这里我们要先考虑request中的address和contracts，都是list
+        # 针对不同的contracts, address是否有局部性（？就是一个地址为0x123456的账户是否只出现在某个合约里，不同合约里的0x123456是否是同一个账户？）
+        # 这里我先简单的针对不同的contracts也就是不同的数据库后端“端口”，全部发送所有address去查询
+    # 那么首先先遍历contracts
+    for contract in post["contracts"]:
+        # 这里我重新构造一下post，因为contracts没必要全部发过去
+            # 但是不知道现在的数据库在处理contracts时是按什么处理的
+                # 我姑且先把contracts参数还是作为list
+        each_query_params = {
+            "address": post["address"],
+            "khop": post["khop"],
+            "start_blk": post["start_blk"],
+            "end_blk": post["end_blk"],
+            "contracts": [ contract ], # 如果只要一个不需要list就把[]删了
+            "timeInterval": post["timeInterval"],
+            "valueDifference": post["valueDifference"]
+        }
+        def get_url_by_contracts(contract):
+            # 如果从简直接默认已知的话就在这写key-value对
+            # url_dict = {
+            #    ${contract}: ${url},
+            #    ${contract}: ${url},
+            #    ...
+            # }
+            # return url_dict[contract]
+            return "http://localhost:8030/"
+        # url = "http://localhost:8030/" 
+        url = get_url_by_contracts(contract)
+        response = requests.get(url, params=each_query_params)
+        headers = response.headers # 响应头信息，是一个字典对象
+        text = response.text # 响应体文本内容
+        encoding = response.encoding # 响应体编码格式，如UTF-8、GBK等
+        content = response.content # 响应体二进制数据，如图片、音频、视频等
+        # print("headers: ", headers)
+        print("text: ", text)
+        # print("encoding: ", encoding)
+        # print("content: ", content)
     
-    # # 将字符串解析成JSON格式
-    parsed_data = json.loads(text)
-    print(parsed_data)
-    # # 提取edges和nodes的数据
-    edges = parsed_data['edges']
+        # # 将字符串解析成JSON格式
+        parsed_data = json.loads(text)
+        print(parsed_data)
+        # 提取edges和nodes的数据
+        edges = parsed_data['edges']
+
+        # 这是最早的定死的写法
+        # with open('./data/position.json', encoding="utf-8") as f:
+        #     node_position = json.load(f)
+        # position_dic = {}
+        # for node_info in node_position:
+        #     position_dic[node_info["id"]] = {"x": node_info["x"], "y": node_info["y"]}
+        # with open("./data/overview-edges.json", encoding="utf-8") as f:
+        #     edges = json.load(f)
+        #     f.close() 
+        
+        
+        # 这里加上contract属性 
+        for edge in edges:
+            edge["contract"] = contract
+        for address in post["address"]:
+            temp_abnormal = analyze(edges, address, int(post["timeInterval"]), float(post["valueDifference"]) * 1e18)
+            for transaction in temp_abnormal:
+                if transaction["tx_hash"] not in abnormal_tx_hash:
+                    abnormal_tx_hash.append(transaction["tx_hash"])
+                    abnormal.append(transaction)
+        total_edges.extend(edges)
+    # 到此所有的交易和异常交易得到完毕
+        # 因为不同合约得到的交易tx_hash不可能一致，不需要进行去重合并(？)
+
     nodes_dict = dict()
     nodes = list()
-    for edge in edges:
+    # 统一计算节点度数
+    for edge in total_edges:
         if nodes_dict.get(edge['source']) is None:
             nodes_dict[edge['source']] = 1
         else:
@@ -93,20 +155,6 @@ def analyze_view(request):
             nodes_dict[edge['target']] = nodes_dict[edge['target']] + 1
     for (k,v) in nodes_dict.items():
         nodes.append(Node(k,v).__dict__)      
-    # nodes = parsed_data['nodes']
-    
-    
-    # with open('./data/position.json', encoding="utf-8") as f:
-    #     node_position = json.load(f)
-    # position_dic = {}
-    # for node_info in node_position:
-    #     position_dic[node_info["id"]] = {"x": node_info["x"], "y": node_info["y"]}
-    # with open("./data/overview-nodes.json", encoding="utf-8") as f:
-    #     nodes = json.load(f)
-    #     f.close()
-    # with open("./data/overview-edges.json", encoding="utf-8") as f:
-    #     edges = json.load(f)
-    #     f.close()
     degree = {"1-5": 0, "6-10": 0, ">10" : 0} 
     def get_size_overview(node_degree, base):
         if node_degree <= 10:
@@ -122,60 +170,20 @@ def analyze_view(request):
         elif node["degree"] <= 10:
             degree["6-10"] += 1
         else:
-            degree[">10"] += 1
-        
-    degree_list = [{"name": key, "value": degree[key]} for key in degree]  
-
+            degree[">10"] += 1       
+    degree_list = [{"name": key, "value": degree[key]} for key in degree]
     overview_result = {
         "nodes": nodes,
-        "edges": edges,
+        "edges": total_edges,
         "json": degree_list
     }  
-    abnormal = []
-    abnormal_tx_hash = []
-    # analyze(edges, post.address[0])
-    for address in post["address"]:
-        temp_abnormal = analyze(edges, address, int(post["timeInterval"]), float(post["valueDifference"]) * 1e18)
-        for transaction in temp_abnormal:
-            if transaction["tx_hash"] not in abnormal_tx_hash:
-                abnormal_tx_hash.append(transaction["tx_hash"])
-                abnormal.append(transaction)
-    # abnormal = list(set(abnormal))
+    # 统一获取异常账户 
     account_in_abnormal = []
-    # 用于判断某个账户是否有转入交易（是否是某个树的根节点）
-    account_flag = {}
-    # 用于前端渲染边label(两个账户转账总额)
-    value_dict = {"Previous Data": {}}
     for transaction in abnormal:
-        account_flag[transaction["target"]] = True
         if transaction["source"] not in account_in_abnormal:
             account_in_abnormal.append(transaction["source"])
         if transaction["target"] not in account_in_abnormal:
             account_in_abnormal.append(transaction["target"])
-        if transaction["source"] not in value_dict:
-            value_dict[transaction["source"]] = {
-                transaction["target"]: float(transaction["value"])
-            }
-        else:
-            if transaction["target"] in value_dict[transaction["source"]]:
-                value_dict[transaction["source"]][transaction["target"]] += float(transaction["value"])
-            else:
-                value_dict[transaction["source"]][transaction["target"]] = float(transaction["value"])
-    
-    for account in account_in_abnormal:
-        value_dict["Previous Data"][account] = "Unknown"
-    tree_data = []
-    for account in account_in_abnormal:
-        if account not in account_flag:
-            result = get_tree_struct(account, abnormal, {})
-            tree_data.append(get_tree_struct(account, abnormal, {}))
-    # analyze_result = {
-    #     "data": {
-    #         "id": "Previous Data",
-    #         "children": tree_data
-    #     },
-    #     "dict": value_dict
-    # }
     analyze_node = []
     for account in account_in_abnormal:
         degree = 0
@@ -183,33 +191,13 @@ def analyze_view(request):
             if transaction["source"] == account or transaction["target"] == account:
                 degree += 1
         analyze_node.append({"id": account, "degree": degree, "size": 10 + get_size_overview(degree, 2)})
+    # abnormal = list(set(abnormal))
     analyze_result = {
         "nodes": analyze_node,
         "edges": abnormal
-    }
-    # print(tree_data)
-    global_path = {}
+    }       
     return JsonResponse({
         'message': 'ok',
         "overview": overview_result,
         "analyze": analyze_result
     })
-def get_tree_struct(address, transactions, global_path):
-    # global global_path
-    global_path[address] = True
-    children = []
-    children_dict = set()
-    for transaction in transactions:
-        if transaction["source"] == address:
-            if transaction["target"] not in children_dict and transaction["target"] not in global_path:
-                children.append(get_tree_struct(transaction["target"], transactions, global_path))
-                children_dict.add(transaction["target"])
-    if len(children) > 0:
-        return {
-            "id": address,
-            "children": children
-        }
-    else:
-        return {
-            "id": address
-        }
