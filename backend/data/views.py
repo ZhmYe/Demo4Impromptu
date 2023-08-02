@@ -134,6 +134,11 @@ def analyze_view(request):
     # 那么首先先遍历contracts
     ignore_contract_address = post["ignore"]
     port_dict = get_port_dict()
+    # 将eth加入合约列表中
+    if post["eth"]:
+        post["contracts"].append('eth')
+    elapsed_time = 0.0
+    # 逐合约查询
     for contract in post["contracts"]:
         # 这里我重新构造一下post，因为contracts没必要全部发过去
             # 但是不知道现在的数据库在处理contracts时是按什么处理的
@@ -151,14 +156,6 @@ def analyze_view(request):
             if port_dict.get(contract) is None:
                 return ""
             return "http://localhost:" + port_dict[contract] + "/"
-            # 如果从简直接默认已知的话就在这写key-value对
-            # url_dict = {
-            #    ${contract}: ${url},
-            #    ${contract}: ${url},
-            #    ...
-            # }
-            # return url_dict[contract]
-        # url = "http://localhost:8030/" 
         url = get_url_by_contracts(contract)
         if url == "":
             print(contract, 'is not supported')
@@ -169,21 +166,15 @@ def analyze_view(request):
         encoding = response.encoding # 响应体编码格式，如UTF-8、GBK等
         content = response.content # 响应体二进制数据，如图片、音频、视频等
     
-        # # 将字符串解析成JSON格式
+        # 将字符串解析成JSON格式
         parsed_data = json.loads(text)
-        # 提取edges和nodes的数据
-        edges = parsed_data['edges']
-
-        # 这是最早的定死的写法
-        # with open('./data/position.json', encoding="utf-8") as f:
-        #     node_position = json.load(f)
-        # position_dic = {}
-        # for node_info in node_position:
-        #     position_dic[node_info["id"]] = {"x": node_info["x"], "y": node_info["y"]}
-        # with open("./data/overview-edges.json", encoding="utf-8") as f:
-        #     edges = json.load(f)
-        #     f.close() 
         
+        # 计算查询时间
+        for queryResult in parsed_data["queryResults"]:
+            elapsed_time += float(queryResult["elapsed_time"])
+            
+        # 提取edges和nodes的数据
+        edges = parsed_data['edges'] if not ignore_contract_address else run_ignore_contract_address(parsed_data['edges'])
         
         # 这里加上contract属性 
         for edge in edges:
@@ -204,13 +195,13 @@ def analyze_view(request):
     # 到此所有的交易和异常交易得到完毕
         # 因为不同合约得到的交易tx_hash不可能一致，不需要进行去重合并(？)
 
-    
+    print('elapsed_time: ', round(elapsed_time, 2), 'ms')
     nodes_dict = dict()
     nodes = list()
     
     # 判断是否忽略合约地址相关的交易
-    if ignore_contract_address:
-        total_edges = run_ignore_contract_address(total_edges)
+    # if ignore_contract_address:
+    #     total_edges = run_ignore_contract_address(total_edges)
         
     # 统一计算节点度数
     for edge in total_edges:
