@@ -8,6 +8,7 @@ from django.conf import settings
 from pyecharts import options as opts
 from pyecharts.charts import Pie
 from pyecharts.faker import Faker
+from web3 import Web3
 import requests
 from . import FilterEngine
 # global_path = {}
@@ -45,12 +46,48 @@ def analyze(transactions, address, time_interval, valueDifference):
     filterEngine.load_transactions(transactions)
     filterEngine.filter_by_address(address)              
     return filterEngine.abnormal
+
+
+# 过滤掉交易中涉及合约地址的部分
+def run_ignore_contract_address(edges):
+    check_list = dict()
+    ans = []
+    w3 = Web3(Web3.HTTPProvider('http://localhost:8545'))
+    for edge in edges:
+        # print(edge)
+        source = edge['source']
+        target = edge['target']
+        if source == '' or target == '':
+            continue
+        flag_1 = False
+        flag_2 = False
+        if check_list.get(source) is None:
+            code = w3.eth.getCode(w3.to_checksum_address(source))
+            flag_1 = code != b''
+            check_list[source] = flag_1
+        else:
+            flag_1 = check_list[source]
+        if check_list.get(target) is None:
+            code = w3.eth.getCode(w3.to_checksum_address(target))
+            flag_2 = code != b''
+            check_list[target] = flag_2
+        else:
+            flag_2 = check_list[target]
+        # if flag_1:
+        #     print(source , 'is a contract address')
+        # if flag_2:
+        #     print(target , 'is a contract address')
+        if flag_1 == False and flag_2 == False:
+            ans.append(edge)
+    return ans
+
 # todo
 # 2023/8/1 ZhmYe
 # 这里原本overview_view和analyze_view是分开来的，因为之前两个之前其实没啥关系都是定死的
 # 现在两个有关系了所以我在前后端都改成了一起
 @check_method('POST')
 def analyze_view(request):
+    ignore_contract_address = True
     total_nodes = []
     total_edges = []
     global global_path
@@ -106,14 +143,9 @@ def analyze_view(request):
         text = response.text # 响应体文本内容
         encoding = response.encoding # 响应体编码格式，如UTF-8、GBK等
         content = response.content # 响应体二进制数据，如图片、音频、视频等
-        # print("headers: ", headers)
-        print("text: ", text)
-        # print("encoding: ", encoding)
-        # print("content: ", content)
     
         # # 将字符串解析成JSON格式
         parsed_data = json.loads(text)
-        print(parsed_data)
         # 提取edges和nodes的数据
         edges = parsed_data['edges']
 
@@ -131,18 +163,30 @@ def analyze_view(request):
         # 这里加上contract属性 
         for edge in edges:
             edge["contract"] = contract
-        for address in post["address"]:
-            temp_abnormal = analyze(edges, address, int(post["timeInterval"]), float(post["valueDifference"]) * 1e18)
-            for transaction in temp_abnormal:
-                if transaction["tx_hash"] not in abnormal_tx_hash:
-                    abnormal_tx_hash.append(transaction["tx_hash"])
-                    abnormal.append(transaction)
+            
+            
+        # 先注释一下
+        # for address in post["address"]:
+        #     temp_abnormal = analyze(edges, address, int(post["timeInterval"]), float(post["valueDifference"]) * 1e18)
+        #     for transaction in temp_abnormal:
+        #         if transaction["tx_hash"] not in abnormal_tx_hash:
+        #             abnormal_tx_hash.append(transaction["tx_hash"])
+        #             abnormal.append(transaction)
+                    
+                    
+                    
         total_edges.extend(edges)
     # 到此所有的交易和异常交易得到完毕
         # 因为不同合约得到的交易tx_hash不可能一致，不需要进行去重合并(？)
 
+    
     nodes_dict = dict()
     nodes = list()
+    
+    # 判断是否忽略合约地址相关的交易
+    if ignore_contract_address:
+        total_edges = run_ignore_contract_address(total_edges)
+        
     # 统一计算节点度数
     for edge in total_edges:
         if nodes_dict.get(edge['source']) is None:
@@ -172,29 +216,39 @@ def analyze_view(request):
         else:
             degree[">10"] += 1       
     degree_list = [{"name": key, "value": degree[key]} for key in degree]
+    
     overview_result = {
         "nodes": nodes,
         "edges": total_edges,
         "json": degree_list
     }  
+    
+    
+    
+    
     # 统一获取异常账户 
-    account_in_abnormal = []
-    for transaction in abnormal:
-        if transaction["source"] not in account_in_abnormal:
-            account_in_abnormal.append(transaction["source"])
-        if transaction["target"] not in account_in_abnormal:
-            account_in_abnormal.append(transaction["target"])
-    analyze_node = []
-    for account in account_in_abnormal:
-        degree = 0
-        for transaction in abnormal:
-            if transaction["source"] == account or transaction["target"] == account:
-                degree += 1
-        analyze_node.append({"id": account, "degree": degree, "size": 10 + get_size_overview(degree, 2)})
-    # abnormal = list(set(abnormal))
+    # account_in_abnormal = []
+    # for transaction in abnormal:
+    #     if transaction["source"] not in account_in_abnormal:
+    #         account_in_abnormal.append(transaction["source"])
+    #     if transaction["target"] not in account_in_abnormal:
+    #         account_in_abnormal.append(transaction["target"])
+    # analyze_node = []
+    # for account in account_in_abnormal:
+    #     degree = 0
+    #     for transaction in abnormal:
+    #         if transaction["source"] == account or transaction["target"] == account:
+    #             degree += 1
+    #     analyze_node.append({"id": account, "degree": degree, "size": 10 + get_size_overview(degree, 2)})
+    # # abnormal = list(set(abnormal))
+    # analyze_result = {
+    #     "nodes": analyze_node,
+    #     "edges": abnormal
+    # }       
+    # 先注释一下
     analyze_result = {
-        "nodes": analyze_node,
-        "edges": abnormal
+        "nodes": [],
+        "edges": []
     }       
     return JsonResponse({
         'message': 'ok',
