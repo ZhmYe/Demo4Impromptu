@@ -103,7 +103,8 @@ def analyze_view(request):
         # contracts: [list, 合约地址]
         # timeInterval: int, time Interval
         # valueDifference: int, value difference
-        # ignore: bool
+        # ignore: bool, 是否过滤checkbox
+        # eth: bool, eth checkbox
     # url = "http://localhost:8000/data/overview/" # 这里把后面的Url补上包括端口，localhost:8010/路由/接口
     # 下面是requests的两种请求
         # response = requests.get(url, params=post) #这个是get请求，这里如果直接运行上面的Url,会有404因为我没有定义get接口（上面我封装了解释器check_method('POST'/'GET')），注意区分get和post
