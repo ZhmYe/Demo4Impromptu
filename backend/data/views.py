@@ -10,6 +10,7 @@ from pyecharts.charts import Pie
 from pyecharts.faker import Faker
 from web3 import Web3
 import requests
+import csv
 from . import FilterEngine
 # global_path = {}
 class Edge:
@@ -30,6 +31,21 @@ class Node:
 
     def to_json(self):
         return json.dumps(self.__dict__)
+
+
+def get_port_dict(file_path='/home/z/yzm_demo_graph/demo_http/Demo4Impromptu/backend/data/port'):
+    data_dict = {}
+    with open(file_path, newline='') as csvfile:
+        csv_reader = csv.DictReader(csvfile, fieldnames=['contract', 'port'])
+        next(csv_reader)  # Skip the first row/header.
+
+        # Iterate through the CSV data and convert it into a dictionary.
+        for row in csv_reader:
+            # Convert the 'port' value to an integer (if needed).
+            row['port'] = row['port']
+            # Add the data to the dictionary, using the 'contract' as the key and 'port' as the value.
+            data_dict[row['contract']] = row['port']
+    return data_dict
 
 def get_color(node_id):
     return '#00BFFF'
@@ -116,6 +132,7 @@ def analyze_view(request):
         # 这里我先简单的针对不同的contracts也就是不同的数据库后端“端口”，全部发送所有address去查询
     # 那么首先先遍历contracts
     ignore_contract_address = post["ignore"]
+    port_dict = get_port_dict()
     for contract in post["contracts"]:
         # 这里我重新构造一下post，因为contracts没必要全部发过去
             # 但是不知道现在的数据库在处理contracts时是按什么处理的
@@ -130,6 +147,9 @@ def analyze_view(request):
             "valueDifference": post["valueDifference"]
         }
         def get_url_by_contracts(contract):
+            if port_dict.get(contract) is None:
+                return ""
+            return "http://localhost:" + port_dict[contract] + "/"
             # 如果从简直接默认已知的话就在这写key-value对
             # url_dict = {
             #    ${contract}: ${url},
@@ -137,9 +157,11 @@ def analyze_view(request):
             #    ...
             # }
             # return url_dict[contract]
-            return "http://localhost:8030/"
         # url = "http://localhost:8030/" 
         url = get_url_by_contracts(contract)
+        if url == "":
+            print(contract, 'is not supported')
+            continue
         response = requests.get(url, params=each_query_params)
         headers = response.headers # 响应头信息，是一个字典对象
         text = response.text # 响应体文本内容
