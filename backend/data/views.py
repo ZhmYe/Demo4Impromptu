@@ -87,7 +87,7 @@ def run_ignore_contract_address(edges):
 # 现在两个有关系了所以我在前后端都改成了一起
 @check_method('POST')
 def analyze_view(request):
-    ignore_contract_address = True
+    # ignore_contract_address = True
     total_nodes = []
     total_edges = []
     global global_path
@@ -103,6 +103,7 @@ def analyze_view(request):
         # contracts: [list, 合约地址]
         # timeInterval: int, time Interval
         # valueDifference: int, value difference
+        # ignore: bool
     # url = "http://localhost:8000/data/overview/" # 这里把后面的Url补上包括端口，localhost:8010/路由/接口
     # 下面是requests的两种请求
         # response = requests.get(url, params=post) #这个是get请求，这里如果直接运行上面的Url,会有404因为我没有定义get接口（上面我封装了解释器check_method('POST'/'GET')），注意区分get和post
@@ -114,6 +115,7 @@ def analyze_view(request):
         # 针对不同的contracts, address是否有局部性（？就是一个地址为0x123456的账户是否只出现在某个合约里，不同合约里的0x123456是否是同一个账户？）
         # 这里我先简单的针对不同的contracts也就是不同的数据库后端“端口”，全部发送所有address去查询
     # 那么首先先遍历contracts
+    ignore_contract_address = post["ignore"]
     for contract in post["contracts"]:
         # 这里我重新构造一下post，因为contracts没必要全部发过去
             # 但是不知道现在的数据库在处理contracts时是按什么处理的
