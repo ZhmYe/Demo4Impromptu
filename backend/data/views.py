@@ -169,9 +169,9 @@ def analyze_view(request):
         encoding = response.encoding # 响应体编码格式，如UTF-8、GBK等
         content = response.content # 响应体二进制数据，如图片、音频、视频等
     
-        # # 将字符串解析成JSON格式
+        # # # 将字符串解析成JSON格式
         parsed_data = json.loads(text)
-        # 提取edges和nodes的数据
+        # # 提取edges和nodes的数据
         edges = parsed_data['edges']
 
         # 这是最早的定死的写法
@@ -191,12 +191,12 @@ def analyze_view(request):
             
             
         # 先注释一下
-        # for address in post["address"]:
-        #     temp_abnormal = analyze(edges, address, int(post["timeInterval"]), float(post["valueDifference"]) * 1e18)
-        #     for transaction in temp_abnormal:
-        #         if transaction["tx_hash"] not in abnormal_tx_hash:
-        #             abnormal_tx_hash.append(transaction["tx_hash"])
-        #             abnormal.append(transaction)
+        for address in post["address"]:
+            temp_abnormal = analyze(edges, address, int(post["timeInterval"]), float(post["valueDifference"]) * 1e18)
+            for transaction in temp_abnormal:
+                if transaction["tx_hash"] not in abnormal_tx_hash:
+                    abnormal_tx_hash.append(transaction["tx_hash"])
+                    abnormal.append(transaction)
                     
                     
                     
@@ -209,8 +209,8 @@ def analyze_view(request):
     nodes = list()
     
     # 判断是否忽略合约地址相关的交易
-    if ignore_contract_address:
-        total_edges = run_ignore_contract_address(total_edges)
+    # if ignore_contract_address:
+        # total_edges = run_ignore_contract_address(total_edges)
         
     # 统一计算节点度数
     for edge in total_edges:
@@ -252,29 +252,29 @@ def analyze_view(request):
     
     
     # 统一获取异常账户 
-    # account_in_abnormal = []
-    # for transaction in abnormal:
-    #     if transaction["source"] not in account_in_abnormal:
-    #         account_in_abnormal.append(transaction["source"])
-    #     if transaction["target"] not in account_in_abnormal:
-    #         account_in_abnormal.append(transaction["target"])
-    # analyze_node = []
-    # for account in account_in_abnormal:
-    #     degree = 0
-    #     for transaction in abnormal:
-    #         if transaction["source"] == account or transaction["target"] == account:
-    #             degree += 1
-    #     analyze_node.append({"id": account, "degree": degree, "size": 10 + get_size_overview(degree, 2)})
-    # # abnormal = list(set(abnormal))
-    # analyze_result = {
-    #     "nodes": analyze_node,
-    #     "edges": abnormal
-    # }       
-    # 先注释一下
+    account_in_abnormal = []
+    for transaction in abnormal:
+        if transaction["source"] not in account_in_abnormal:
+            account_in_abnormal.append(transaction["source"])
+        if transaction["target"] not in account_in_abnormal:
+            account_in_abnormal.append(transaction["target"])
+    analyze_node = []
+    for account in account_in_abnormal:
+        degree = 0
+        for transaction in abnormal:
+            if transaction["source"] == account or transaction["target"] == account:
+                degree += 1
+        analyze_node.append({"id": account, "degree": degree, "size": 10 + get_size_overview(degree, 2)})
+    # abnormal = list(set(abnormal))
     analyze_result = {
-        "nodes": [],
-        "edges": []
+        "nodes": analyze_node,
+        "edges": abnormal
     }       
+    # 先注释一下
+    # analyze_result = {
+    #     "nodes": [],
+    #     "edges": []
+    # }       
     return JsonResponse({
         'message': 'ok',
         "overview": overview_result,
