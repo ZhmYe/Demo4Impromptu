@@ -11,6 +11,7 @@ from pyecharts.faker import Faker
 from web3 import Web3
 import requests
 import csv
+import random
 from . import FilterEngine
 # global_path = {}
 class Edge:
@@ -32,6 +33,17 @@ class Node:
     def to_json(self):
         return json.dumps(self.__dict__)
 
+
+def random_string16(randomlength=16):
+  """
+  生成一个指定长度的随机字符串
+  """
+  random_str ='0x'
+  base_str ='abcdefghigklmnopqrstuvwxyz0123456789'
+  length =len(base_str) -1
+  for i in range(randomlength):
+    random_str +=base_str[random.randint(0, length)]
+  return random_str
 
 def get_port_dict(file_path='/home/z/yzm_demo_graph/demo_http/Demo4Impromptu/backend/data/port'):
     data_dict = {}
@@ -134,6 +146,11 @@ def analyze_view(request):
     # 那么首先先遍历contracts
     ignore_contract_address = post["ignore"]
     port_dict = get_port_dict()
+    # 将eth加入合约列表中
+    if post["eth"]:
+        post["contracts"].append('eth')
+    elapsed_time = 0.0
+    # 逐合约查询
     for contract in post["contracts"]:
         # 这里我重新构造一下post，因为contracts没必要全部发过去
             # 但是不知道现在的数据库在处理contracts时是按什么处理的
@@ -151,23 +168,20 @@ def analyze_view(request):
             if port_dict.get(contract) is None:
                 return ""
             return "http://localhost:" + port_dict[contract] + "/"
-            # 如果从简直接默认已知的话就在这写key-value对
-            # url_dict = {
-            #    ${contract}: ${url},
-            #    ${contract}: ${url},
-            #    ...
-            # }
-            # return url_dict[contract]
-        # url = "http://localhost:8030/" 
         url = get_url_by_contracts(contract)
         if url == "":
             print(contract, 'is not supported')
             continue
-        response = requests.get(url, params=each_query_params)
-        headers = response.headers # 响应头信息，是一个字典对象
-        text = response.text # 响应体文本内容
-        encoding = response.encoding # 响应体编码格式，如UTF-8、GBK等
-        content = response.content # 响应体二进制数据，如图片、音频、视频等
+        text = ""
+        try:
+            response = requests.get(url, params=each_query_params)
+            text = response.text # 响应体文本内容
+        except:
+            print(contract, 'is not supported')
+            continue
+        # headers = response.headers # 响应头信息，是一个字典对象
+        # encoding = response.encoding # 响应体编码格式，如UTF-8、GBK等
+        # content = response.content # 响应体二进制数据，如图片、音频、视频等
     
         # # # 将字符串解析成JSON格式
         parsed_data = json.loads(text)
@@ -183,13 +197,25 @@ def analyze_view(request):
         # with open("./data/overview-edges.json", encoding="utf-8") as f:
         #     edges = json.load(f)
         #     f.close() 
+        # 将字符串解析成JSON格式
+        parsed_data = json.loads(text)
         
+        # 计算查询时间
+        for queryResult in parsed_data["queryResults"]:
+            elapsed_time += float(queryResult["elapsed_time"])
+            
+        # 提取edges和nodes的数据
+        edges = parsed_data['edges'] if not ignore_contract_address else run_ignore_contract_address(parsed_data['edges'])
+        
+        # print(edges)
         
         # 这里加上contract属性 
         for edge in edges:
             edge["contract"] = contract
+            # db里没有存tx_hash，这边随机生成一下
+            edge["tx_hash"] = random_string16(64)
             
-            
+        print(edges)
         # 先注释一下
         for address in post["address"]:
             temp_abnormal = analyze(edges, address, int(post["timeInterval"]), float(post["valueDifference"]) * 1e18)
@@ -204,13 +230,14 @@ def analyze_view(request):
     # 到此所有的交易和异常交易得到完毕
         # 因为不同合约得到的交易tx_hash不可能一致，不需要进行去重合并(？)
 
-    
+    print('elapsed_time: ', round(elapsed_time, 2), 'ms')
     nodes_dict = dict()
     nodes = list()
     
     # 判断是否忽略合约地址相关的交易
     # if ignore_contract_address:
         # total_edges = run_ignore_contract_address(total_edges)
+    #     total_edges = run_ignore_contract_address(total_edges)
         
     # 统一计算节点度数
     for edge in total_edges:
@@ -270,6 +297,7 @@ def analyze_view(request):
         "nodes": analyze_node,
         "edges": abnormal
     }       
+    print(abnormal)       
     # 先注释一下
     # analyze_result = {
     #     "nodes": [],
@@ -280,3 +308,4 @@ def analyze_view(request):
         "overview": overview_result,
         "analyze": analyze_result
     })
+    
