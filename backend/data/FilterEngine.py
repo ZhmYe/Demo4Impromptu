@@ -113,12 +113,12 @@ class FilterEngine:
             blockNumber_range = [_ for _ in range(blockNumber - self.interval, blockNumber + 1)]
             flag = False # 异常的转出不会在转入之前，所以在转入交易blockNumber存在前，不加入转出交易
             for period in blockNumber_range:
-                if str(period) in transfer_cluster:
+                if period in transfer_cluster:
                     flag = True
-                    transfer_transaction.extend(transfer_cluster[str(period)])
-                if str(period) in transferOut_cluster and flag: 
+                    transfer_transaction.extend(transfer_cluster[period])
+                if period in transferOut_cluster and flag: 
                     # 这里保证不会出现一笔转出交易在所有转入交易之前
-                    transferOut_transaction.extend(transferOut_cluster[str(period)])
+                    transferOut_transaction.extend(transferOut_cluster[period])
             # print(len(transfer_transaction), len(transferOut_transaction))
             filter_abnormal, filter_account = self.filter(transfer_transaction, transferOut_transaction)
             abnormal.extend(filter_abnormal)
