@@ -108,7 +108,44 @@ def run_ignore_contract_address(edges):
         if flag_1 == False and flag_2 == False:
             ans.append(edge)
     return ans
-
+def get_struct_edges(edges):
+    struct_edges = []
+    from_to_dict = {}
+    for edge in edges:
+        if edge["source"] not in from_to_dict:
+            from_to_dict[edge["source"]] = {}
+        if edge["target"] not in from_to_dict[edge["source"]]:
+            from_to_dict[edge["source"]][edge["target"]] = {
+                "value": edge["value"],
+                "blockNumber": [edge["blockNumber"]],
+                "contract": [edge["contract"]],
+                "tx_hash": [edge["tx_hash"]]
+            } 
+        else:
+            from_to_dict[edge["source"]][edge["target"]]["value"] += edge["value"]
+            if edge["blockNumber"] not in from_to_dict[edge["source"]][edge["target"]]["blockNumber"]:
+                from_to_dict[edge["source"]][edge["target"]]["blockNumber"].append(edge["blockNumber"])
+            if edge["contract"] not in from_to_dict[edge["source"]][edge["target"]]["contract"]:
+                from_to_dict[edge["source"]][edge["target"]]["contract"].append(edge["contract"])
+            # 现在随机生成的tx_hash还是有可能重合的（逻辑上）
+            if edge["tx_hash"] not in from_to_dict[edge["source"]][edge["target"]]["tx_hash"]:
+                from_to_dict[edge["source"]][edge["target"]]["tx_hash"].append(edge["tx_hash"])
+    print(from_to_dict)
+    for source in from_to_dict:
+        for target in from_to_dict[source]:
+            # print(target)
+            struct_edges.append(
+                {
+                    "source": source, 
+                    "target": target, 
+                    "blockNumber": from_to_dict[source][target]["blockNumber"],
+                    "contract": from_to_dict[source][target]["contract"],
+                    "tx_hash": from_to_dict[source][target]["tx_hash"],
+                    "value": from_to_dict[source][target]["value"]
+                }
+                )
+    # print(struct_edges)
+    return struct_edges
 # todo
 # 2023/8/1 ZhmYe
 # 这里原本overview_view和analyze_view是分开来的，因为之前两个之前其实没啥关系都是定死的
@@ -167,7 +204,7 @@ def analyze_view(request):
         def get_url_by_contracts(contract):
             if port_dict.get(contract) is None:
                 return ""
-            return "http://localhost:" + port_dict[contract] + "/"
+            return "http://localhost:" + port_dict.get(contract)+ "/"
         url = get_url_by_contracts(contract)
         if url == "":
             print(contract, 'is not supported')
@@ -206,7 +243,6 @@ def analyze_view(request):
             
         # 提取edges和nodes的数据
         edges = parsed_data['edges'] if not ignore_contract_address else run_ignore_contract_address(parsed_data['edges'])
-        
         # print(edges)
         
         # 这里加上contract属性 
@@ -215,7 +251,7 @@ def analyze_view(request):
             # db里没有存tx_hash，这边随机生成一下
             edge["tx_hash"] = random_string16(64)
             
-        print(edges)
+        # print(edges)
         # 先注释一下
         for address in post["address"]:
             temp_abnormal = analyze(edges, address, int(post["timeInterval"]), float(post["valueDifference"]) * 1e18)
@@ -235,9 +271,8 @@ def analyze_view(request):
     nodes = list()
     
     # 判断是否忽略合约地址相关的交易
-    # if ignore_contract_address:
-        # total_edges = run_ignore_contract_address(total_edges)
-    #     total_edges = run_ignore_contract_address(total_edges)
+    if ignore_contract_address:
+        total_edges = run_ignore_contract_address(total_edges)
         
     # 统一计算节点度数
     for edge in total_edges:
@@ -268,10 +303,10 @@ def analyze_view(request):
         else:
             degree[">10"] += 1       
     degree_list = [{"name": key, "value": degree[key]} for key in degree]
-    
+    # print(total_edges)
     overview_result = {
         "nodes": nodes,
-        "edges": total_edges,
+        "edges": get_struct_edges(total_edges),
         "json": degree_list
     }  
     
@@ -291,18 +326,13 @@ def analyze_view(request):
         for transaction in abnormal:
             if transaction["source"] == account or transaction["target"] == account:
                 degree += 1
-        analyze_node.append({"id": account, "degree": degree, "size": 10 + get_size_overview(degree, 2)})
+        analyze_node.append({"id": account, "degree": degree, "size": 50})
     # abnormal = list(set(abnormal))
     analyze_result = {
         "nodes": analyze_node,
-        "edges": abnormal
+        "edges": get_struct_edges(abnormal)
     }       
-    print(abnormal)       
-    # 先注释一下
-    # analyze_result = {
-    #     "nodes": [],
-    #     "edges": []
-    # }       
+    # print(abnormal)           
     return JsonResponse({
         'message': 'ok',
         "overview": overview_result,
