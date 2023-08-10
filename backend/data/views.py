@@ -54,9 +54,12 @@ def get_port_dict(file_path='/home/z/yzm_demo_graph/demo_http/Demo4Impromptu/bac
         # Iterate through the CSV data and convert it into a dictionary.
         for row in csv_reader:
             # Convert the 'port' value to an integer (if needed).
-            row['port'] = row['port']
+            # row['port'] = row['port']
             # Add the data to the dictionary, using the 'contract' as the key and 'port' as the value.
-            data_dict[row['contract']] = row['port']
+            data_dict[row['contract']] = {
+                "port": row['port'],
+                "type": row["type"]
+            }
     return data_dict
 
 def get_color(node_id):
@@ -204,7 +207,7 @@ def analyze_view(request):
         def get_url_by_contracts(contract):
             if port_dict.get(contract) is None:
                 return ""
-            return "http://localhost:" + port_dict.get(contract)+ "/"
+            return "http://localhost:" + port_dict.get(contract)["port"]+ "/"
         url = get_url_by_contracts(contract)
         if url == "":
             print(contract, 'is not supported')
@@ -250,6 +253,7 @@ def analyze_view(request):
             edge["contract"] = contract
             # db里没有存tx_hash，这边随机生成一下
             edge["tx_hash"] = random_string16(64)
+            edge["coin_type"] = port_dict.get(contract)
             
         # print(edges)
         # 先注释一下
