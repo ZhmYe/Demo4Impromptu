@@ -133,7 +133,7 @@ def get_struct_edges(edges):
             # 现在随机生成的tx_hash还是有可能重合的（逻辑上）
             if edge["tx_hash"] not in from_to_dict[edge["source"]][edge["target"]]["tx_hash"]:
                 from_to_dict[edge["source"]][edge["target"]]["tx_hash"].append(edge["tx_hash"])
-    print(from_to_dict)
+    # print(from_to_dict)
     for source in from_to_dict:
         for target in from_to_dict[source]:
             # print(target)
@@ -144,7 +144,8 @@ def get_struct_edges(edges):
                     "blockNumber": from_to_dict[source][target]["blockNumber"],
                     "contract": from_to_dict[source][target]["contract"],
                     "tx_hash": from_to_dict[source][target]["tx_hash"],
-                    "value": from_to_dict[source][target]["value"]
+                    "value": from_to_dict[source][target]["value"],
+                    "coin_type": edges[0]["coin_type"]
                 }
                 )
     # print(struct_edges)

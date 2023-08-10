@@ -13,6 +13,7 @@ class Transaction:
         self.toAccount = tx_json["target"]
         self.value = float(tx_json["value"])
         self.contract = tx_json["contract"]
+        self.coin_type = tx_json["coin_type"]
     def to_json(self):
         return {
             "blockNumber": self.blockNumber,
@@ -20,7 +21,8 @@ class Transaction:
             "target": self.toAccount,
             "source": self.fromAccount,
             "value": self.value,
-            "contract": self.contract
+            "contract": self.contract,
+            "coin_type": self.coin_type
         }
 # 账户信息，一个地址所涉及的所有转入、转出交易及相关信息
 class AccountInfo:
