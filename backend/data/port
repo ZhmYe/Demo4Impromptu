@@ -1,3 +1,3 @@
-contract,port
-0xdac17f958d2ee523a2206206994597c13d831ec7,8030
-eth,8031
+contract,port,type
+0xdac17f958d2ee523a2206206994597c13d831ec7,8030,USDT
+0x0,8031,ETH
