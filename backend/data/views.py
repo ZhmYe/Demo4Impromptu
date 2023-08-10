@@ -48,7 +48,7 @@ def random_string16(randomlength=16):
 def get_port_dict(file_path='/home/z/yzm_demo_graph/demo_http/Demo4Impromptu/backend/data/port'):
     data_dict = {}
     with open(file_path, newline='') as csvfile:
-        csv_reader = csv.DictReader(csvfile, fieldnames=['contract', 'port'])
+        csv_reader = csv.DictReader(csvfile, fieldnames=['contract', 'port', 'type'])
         next(csv_reader)  # Skip the first row/header.
 
         # Iterate through the CSV data and convert it into a dictionary.
