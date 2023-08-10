@@ -253,7 +253,7 @@ def analyze_view(request):
             edge["contract"] = contract
             # db里没有存tx_hash，这边随机生成一下
             edge["tx_hash"] = random_string16(64)
-            edge["coin_type"] = port_dict.get(contract)
+            edge["coin_type"] = port_dict.get(contract)["type"]
             
         # print(edges)
         # 先注释一下
