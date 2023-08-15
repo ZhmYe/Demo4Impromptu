@@ -209,6 +209,7 @@ def analyze_view(request):
             if port_dict.get(contract) is None:
                 return ""
             return "http://localhost:" + port_dict.get(contract)["port"]+ "/"
+            # return "http://localhost:8030/"
         url = get_url_by_contracts(contract)
         if url == "":
             print(contract, 'is not supported')
@@ -254,7 +255,8 @@ def analyze_view(request):
             edge["contract"] = contract
             # db里没有存tx_hash，这边随机生成一下
             edge["tx_hash"] = random_string16(64)
-            edge["coin_type"] = port_dict.get(contract)["type"]
+            # edge["coin_type"] = port_dict.get(contract)["type"]
+            edge["coin_type"] = "USDT"
             
         # print(edges)
         # 先注释一下
@@ -320,18 +322,37 @@ def analyze_view(request):
     
     # 统一获取异常账户 
     account_in_abnormal = []
+    account_in_abnormal_type_dict = {}
     for transaction in abnormal:
         if transaction["source"] not in account_in_abnormal:
             account_in_abnormal.append(transaction["source"])
+            account_in_abnormal_type_dict[transaction["source"]] = {"search-target": False, "question": False, "search": False}
         if transaction["target"] not in account_in_abnormal:
             account_in_abnormal.append(transaction["target"])
+            account_in_abnormal_type_dict[transaction["target"]] = {"search-target": False, "question": False, "search": False}
+        if transaction["source"] in post["address"]:
+            account_in_abnormal_type_dict[transaction["target"]]["search-target"] = True
+        if transaction["value"] == 0:
+            account_in_abnormal_type_dict[transaction["target"]]["question"] = True
+    for address in post["address"]:
+        if address in account_in_abnormal_type_dict:
+            account_in_abnormal_type_dict[address]["search"] = True
+        
     analyze_node = []
     for account in account_in_abnormal:
         degree = 0
         for transaction in abnormal:
             if transaction["source"] == account or transaction["target"] == account:
                 degree += 1
-        analyze_node.append({"id": account, "degree": degree, "size": 50})
+        node_img = ""
+        if account_in_abnormal_type_dict[account]["question"]:
+            node_img = "question2.png"
+        if account_in_abnormal_type_dict[account]["search-target"]:
+            node_img = "hacker.png"
+        if account_in_abnormal_type_dict[account]["search"]:
+            node_img = "star.png"
+        analyze_node.append({"id": account, "degree": degree, "size": 50, "img": node_img})
+        # print(node_img)
     # abnormal = list(set(abnormal))
     analyze_result = {
         "nodes": analyze_node,
