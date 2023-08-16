@@ -83,7 +83,7 @@ def analyze(transactions, address, time_interval, valueDifference):
 def run_ignore_contract_address(edges):
     check_list = dict()
     ans = []
-    w3 = Web3(Web3.HTTPProvider('http://localhost:8545'))
+    w3 = Web3(Web3.HTTPProvider('http://49.52.27.118:8545'))
     for edge in edges:
         # print(edge)
         source = edge['source']
@@ -186,7 +186,7 @@ def analyze_view(request):
         # 这里我先简单的针对不同的contracts也就是不同的数据库后端“端口”，全部发送所有address去查询
     # 那么首先先遍历contracts
     ignore_contract_address = post["ignore"]
-    port_dict = get_port_dict()
+    # port_dict = get_port_dict()
     # 将eth加入合约列表中
     if post["eth"]:
         post["contracts"].append('eth')
@@ -206,10 +206,10 @@ def analyze_view(request):
             "valueDifference": post["valueDifference"]
         }
         def get_url_by_contracts(contract):
-            if port_dict.get(contract) is None:
-                return ""
-            return "http://localhost:" + port_dict.get(contract)["port"]+ "/"
-            # return "http://localhost:8030/"
+            # if port_dict.get(contract) is None:
+                # return ""
+            # return "http://localhost:" + port_dict.get(contract)["port"]+ "/"
+            return "http://49.52.27.118:8030/"
         url = get_url_by_contracts(contract)
         if url == "":
             print(contract, 'is not supported')
