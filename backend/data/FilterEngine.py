@@ -123,6 +123,9 @@ class FilterEngine:
                 if period in transferOut_cluster and flag: 
                     # 这里保证不会出现一笔转出交易在所有转入交易之前
                     transferOut_transaction.extend(transferOut_cluster[period])
+            if not flag: # 如果根本没有转入
+                for period in transferOut_cluster:
+                    transferOut_transaction.extend(transferOut_cluster[period])
             # print(len(transfer_transaction), len(transferOut_transaction))
             filter_abnormal, filter_account = self.filter(transfer_transaction, transferOut_transaction)
             abnormal.extend(filter_abnormal)
@@ -148,6 +151,15 @@ class FilterEngine:
             transferOut_total_sum += transaction.value
         for transaction in transfer_transaction:
             transfer_total_sum += transaction.value
+        if len(transfer_transaction) == 0:
+            # 没有转入交易只有转出交易,认为所有转出都是异常
+            # 递归的结果一定是有转入交易的，所以进入这里的只有可能是查询根节点
+            for transaction in transferOut_transaction:
+                if transaction.hash not in abnormal_tx_hash:
+                    abnormal_tx_hash.append(transaction.hash)
+                    abnormal.append(transaction.to_json())
+                    abnormal_account.append(transaction.toAccount)
+            return abnormal, list(set(abnormal_account))
         # |转入总金额 - 转出总金额| <= valueDifference
         if math.fabs(transferOut_total_sum - transfer_total_sum) <= self.valueDifference:
             # 此时两者全部返回
